@@ -53,7 +53,7 @@ a, a:visited, a:hover, a:active {
 
 
 
-
+/* Setting up fonts, colours, direction */
 body {
   background-color: var(--blue);
   color: var(--green);
@@ -87,16 +87,16 @@ body {
 /* Inspiration from https://css-tricks.com/the-checkbox-hack/ */
 .nav-right {
   margin: 30px;
-  margin-left: 300px;
+  margin-left: 320px;
 }
 
 .burger-icon {
-  font-size: 70px;
+  font-size: 50px;
 }
 
 .close-icon {
-  font-size: 70px;
-  translate: 10px;
+  font-size: 50px;
+  translate: 7px;
 }
 
 .tabs {
@@ -187,11 +187,14 @@ body {
 
 
 /* Main body */
-
+main {
+  z-index: -1;
+}
 
 /* Introductory text */
 .intro {
   margin-top:200px;
+  line-height: 1.2;
 }
 
 h1 {
@@ -205,21 +208,20 @@ p span em {
   color: #5fecc8;
 }
 
-
 /* Intro text animation */
 h1 p {
   opacity: 0;
 }
 
 h1 p:nth-child(1){
-  animation: change 2s ease-in-out forwards;
+  animation: dissolve 1.2s ease-in-out forwards;
 }
 
 h1 p:nth-child(2){
-  animation: change 1s ease-in-out forwards;
+  animation: dissolve 0.7s ease-in-out forwards;
 }
 h1 p:nth-child(3){
-  animation: change 2.5s ease-in-out forwards;
+  animation: dissolve 2s ease-in-out forwards;
 }
 
 
@@ -232,25 +234,47 @@ h1 p:nth-child(3){
   margin-top: 40px;
 }
 
-.links p {
+.links div {
+  display: flex;
+  justify-content: end;
   opacity: 0;
   padding: 10px;
-  font-size: 1.5em;
-  animation-delay: 2s;
-  animation: change 1s ease-in-out forwards;
+  font-size: 1.7em;
 }
 
-@keyframes arrow-movement {
-  from {
-    margin-top: 10px;
-  }
-  to {
-    margin-top: 0px;
-  }
-  
+.links i {
+  font-size: 30px;
+  margin-right: 20px;
+  align-self: center;
+  /* animation: wiggle 3s ease-in-out infinite; */
 }
 
-@keyframes change {
+.links .projects-link i{
+  animation: wiggle 2s 0s ease-in-out infinite;
+}
+
+.links .knowme-link i {
+  animation: wiggle 3s 1s infinite;
+}
+
+.links div:nth-child(1){
+  animation: dissolve 1s normal 1.6s forwards;
+}
+
+.links div:nth-child(2){
+  animation: dissolve 1s normal 2s forwards;
+}
+
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+ 80% { transform: rotate(0deg); }
+ 85% { transform: rotate(10deg); }
+ 95% { transform: rotate(-10deg); }
+100% { transform: rotate(0deg); }
+}
+
+@keyframes dissolve {
   to {
     opacity: 1;
   }
