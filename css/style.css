@@ -183,9 +183,6 @@ body {
 }
 
 
-
-
-
 /* Main body */
 main {
   z-index: -1;
@@ -225,8 +222,6 @@ h1 p:nth-child(3){
 }
 
 
-
-
 /* Links */
 .links {
   text-align: end;
@@ -246,7 +241,6 @@ h1 p:nth-child(3){
   font-size: 30px;
   margin-right: 20px;
   align-self: center;
-  /* animation: wiggle 3s ease-in-out infinite; */
 }
 
 .links .projects-link i{
@@ -265,7 +259,6 @@ h1 p:nth-child(3){
   animation: dissolve 1s normal 2s forwards;
 }
 
-
 @keyframes wiggle {
   0% { transform: rotate(0deg); }
  80% { transform: rotate(0deg); }
@@ -278,4 +271,17 @@ h1 p:nth-child(3){
   to {
     opacity: 1;
   }
+}
+
+
+
+/* Footer */
+footer {
+  position:fixed;
+  bottom: 0;
+}
+
+footer p {
+  padding: 10px 60px;
+  font-size: 0.8em;
 }
