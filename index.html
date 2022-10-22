@@ -12,27 +12,31 @@
   <header>
     <!-- Navigation area -->
     <nav class="nav-cont-cont">
-      <nav class="nav-container">
+      <div class="nav-container">
         <div class="nav-left">
           <div class="nav-logo">  
             <!-- <a href="" class="logo">Matt Garrow</a> -->
           </div>
         </div>
         <div class="nav-right">
+          <!-- Dropdown menu -->
           <div class="tabs">
             <div class="tab">
+              <!-- Burger icon button -->
               <input type="radio" id="tab-1" name="tab-group-1" />
               <label for="tab-1">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-bars burger-icon" aria-hidden="true"></i>
               </label>
 
+              <!-- Cross icon button -->
               <div class="tab close-tab">
                 <input type="radio" id="tab-close" name="tab-group-1" />
                 <label for="tab-close">
-                  <i class="fa-solid fa-xmark"></i>
+                  <i class="fa-solid fa-xmark close-icon"></i>
                 </label>
               </div>
           
+              <!-- Menu list -->
               <div class="content">
                 <ul>
                   <li><a href="">Home</a></li>
@@ -44,40 +48,32 @@
             </div>
           </div>
         </div>
-      </nav>
+      </div>
     </nav>
-
-
-
-
-
-    
-  
-
   </header>
 
 
 
   <!-- Main area -->
   <main class="main-container">
-    <section>
-      <!-- <h1>Hey, I’m <span class="highlight-text">Matt Garrow</span>. A junior webdev and video producer.</h1> -->
+    <section class="intro">
+      <h1>
+        <p>Hey, I’m </p>
+        <p><span><em>Matt Garrow</em></span>.</p>
+        <p>A junior webdev and video producer.</p>
+      </h1>
+    </section>
+    <section class="links">
+      <p>Check out my projects</p>
+      <p>Wanna get to know me?</p>
     </section>
   </main>
+
 
   <!-- Footer -->
   <footer>
 
   </footer>
 
-  <!-- Follow mouse -->
-  <!-- <script>
-    let circle = document.getElementById('circle');
-    const onMouseMove = (e) =>{
-      circle.style.left = e.pageX + 'px';
-      circle.style.top = e.pageY + 'px';
-    }
-    document.addEventListener('mousemove', onMouseMove);
-  </script> -->
 </body>
 </html>

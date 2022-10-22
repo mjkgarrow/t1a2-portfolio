@@ -1,3 +1,5 @@
+/* Inspiration https://swabtheworld.com/en/ */
+
 
 /* Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
@@ -50,6 +52,8 @@ a, a:visited, a:hover, a:active {
 }
 
 
+
+
 body {
   background-color: var(--blue);
   color: var(--green);
@@ -64,26 +68,35 @@ body {
 
 
 /* Navigation */
+.nav-cont-cont {
+  position: fixed;
+  top: 0;
+}
+
 .nav-container {
   display: flex;
   justify-content: flex-end;
-
 }
-
 
 .nav-logo {
   /* font-family: 'Monoton', cursive; */
   font-size: 1.5em;
 }
 
-
-
-
-
 /* Dropdown menu */
-
+/* Inspiration from https://css-tricks.com/the-checkbox-hack/ */
 .nav-right {
-  left: calc(100% - 30px);
+  margin: 30px;
+  margin-left: 300px;
+}
+
+.burger-icon {
+  font-size: 70px;
+}
+
+.close-icon {
+  font-size: 70px;
+  translate: 10px;
 }
 
 .tabs {
@@ -110,10 +123,10 @@ body {
   position: absolute;
   top: 100%;
   opacity: 0;
-  left: 0;
   background-color: var(--green);
-  left: -100px;
+  left: calc(100% - 150px);
 }
+
 .content ul {
   margin: 0;
   padding: 0;
@@ -126,23 +139,16 @@ body {
   white-space: nowrap;
   text-decoration: none;
   padding: 10px 15px;
-  width: 100px;
+  width: auto;
+  font-size: 30px;
+  border: 1px solid var(--green);
+  text-align: right;
 }
 
 .content a:hover {
   background-color: var(--blue);
   color: var(--green);
   border: 1px dotted var(--green);
-}
-
-[type="radio"]:checked ~ label {
-  z-index: 2;
-  opacity: 0;
-}
-
-[type="radio"]:checked ~ label ~ .content {
-  z-index: 1;
-  opacity: 1;
 }
 
 .close-tab {
@@ -166,24 +172,86 @@ body {
   opacity: 1;
 }
 
+[type="radio"]:checked ~ label {
+  z-index: 2;
+  opacity: 0;
+}
+
+[type="radio"]:checked ~ label ~ .content {
+  z-index: 1;
+  opacity: 1;
+}
+
 
 
 
 
 /* Main body */
-section {
-  display: flex;
-  flex-direction: column wrap;
-  white-space: wrap;
-}
 
+
+/* Introductory text */
+.intro {
+  margin-top:200px;
+}
 
 h1 {
+  text-align: left;
   color: white;
+  font-size: 3em;
+  padding: 15px;
+}
+
+p span em {
+  color: #5fecc8;
 }
 
 
-.highlight-text {
-  color: #5fecc8;
+/* Intro text animation */
+h1 p {
+  opacity: 0;
+}
 
+h1 p:nth-child(1){
+  animation: change 2s ease-in-out forwards;
+}
+
+h1 p:nth-child(2){
+  animation: change 1s ease-in-out forwards;
+}
+h1 p:nth-child(3){
+  animation: change 2.5s ease-in-out forwards;
+}
+
+
+
+
+/* Links */
+.links {
+  text-align: end;
+  padding-right: 30px;
+  margin-top: 40px;
+}
+
+.links p {
+  opacity: 0;
+  padding: 10px;
+  font-size: 1.5em;
+  animation-delay: 2s;
+  animation: change 1s ease-in-out forwards;
+}
+
+@keyframes arrow-movement {
+  from {
+    margin-top: 10px;
+  }
+  to {
+    margin-top: 0px;
+  }
+  
+}
+
+@keyframes change {
+  to {
+    opacity: 1;
+  }
 }
