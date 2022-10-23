@@ -221,12 +221,23 @@ h1 p:nth-child(3){
   animation: dissolve 2s ease-in-out forwards;
 }
 
+/* h1 p:nth-child(1){
+  animation: dissolve 1s ease-in-out forwards;
+}
+
+h1 p:nth-child(2){
+  animation: dissolve 1.5s ease-in-out forwards;
+}
+h1 p:nth-child(3){
+  animation: dissolve 2s ease-in-out forwards;
+} */
 
 /* Links */
 .links {
   text-align: end;
   padding-right: 30px;
   margin-top: 40px;
+  color: white;
 }
 
 .links div {
@@ -241,6 +252,7 @@ h1 p:nth-child(3){
   font-size: 30px;
   margin-right: 20px;
   align-self: center;
+  color: var(--green);
 }
 
 .links .projects-link i{
@@ -273,15 +285,31 @@ h1 p:nth-child(3){
   }
 }
 
+/* @keyframes dissolve {
+  0% {
+    opacity: 0;
+    translate: 0px 30px;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+} */
+
 
 
 /* Footer */
 footer {
   position:fixed;
   bottom: 0;
+  color: var(--green);
 }
 
 footer p {
+  color: var(--blue);
   padding: 10px 60px;
   font-size: 0.8em;
 }
