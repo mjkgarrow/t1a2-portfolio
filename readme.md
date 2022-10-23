@@ -6,4 +6,10 @@ I've chosen to make a clickable drop down menu to make the site more accessible 
 
 Colour choices are in line with accessability guidelines for appropriate contrast levels and viewing.
 
+Current state of website:
+
+![WIP Mobile site](./images/Mobile-first%20site.png)
+
+Wireframe:
+
 ![Wireframe WIP](./images/WIP%20Index%20wireframe.png)
