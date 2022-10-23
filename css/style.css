@@ -370,19 +370,7 @@ h1 p:nth-child(3){
   }
 }
 
-/* @keyframes dissolve {
-  0% {
-    opacity: 0;
-    translate: 0px 30px;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 1;
-    translate: 0px 0px;
-  }
-} */
+
 
 
 
@@ -400,12 +388,39 @@ footer p {
   font-size: 0.8em;
 }
 
-footer div {
+.coding {
   display: flex;
   background-color: #21252c;
   justify-content: space-between;
+  font-family: 'Courier New', Courier, monospace;
+  height: 2em;
 }
 
-footer div span {
-  font-family: 'Courier New', Courier, monospace;
+.left-code {
+  display: flex;
+  width: auto;
+  margin-left: 10px;
+  align-items: center;
 }
+
+.left-code div{
+  padding: 0 7px;
+}
+
+.source-icon {
+  width: auto;
+  height: 15px;
+}
+
+.right-code {
+  margin-right: 10px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-code div {
+  padding: 0 7px;
+}
+
