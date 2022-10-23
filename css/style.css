@@ -67,6 +67,9 @@ body {
 
 
 
+
+
+
 /* Navigation */
 .nav-cont-cont {
   position: fixed;
@@ -185,6 +188,12 @@ body {
 }
 
 
+
+
+
+
+
+
 /* Main body */
 main {
   z-index: -1;
@@ -207,61 +216,73 @@ h1 {
   color: #5fecc8;
 }
 
-
-
 /* Text animation */
-.stuff {
-  /* display: inline-block; */
-  overflow: hidden;
-  white-space: nowrap;
-  /* translate: -30px 11px; */
-  width: 0px;
-  animation: type 0.5s steps(6, end) forwards 7s
-}
-
-.apps {
-  /* display: inline-block; */
-  overflow: hidden;
-  white-space: nowrap;
-  /* translate: -20px 11px; */
-  width: 0px;
-  animation: type 0.5s steps(6, end) forwards 4s, delete 0.5s steps(6, end) forwards 6s;
-
-}
-
-.sites {
-  /* display: inline-block; */
-  overflow: hidden;
-  white-space: nowrap;
-  /* translate: -12px 11px; */
-  width: 95px;
-  animation: delete 0.5s steps(6, end) forwards 3s;
+.text-animation {
+  height: 1.2em;
 }
 
 .caret {
-  /* display: inline-block; */
-  position: relative;
-  height: 1em;
-  translate: 100px 10px;
-  border-right: .05em solid var(--green);
-  animation: blink-caret .5s step-end infinite, 
-  caret-delete 0.5s steps(6, end) forwards 3s,
-  caret-type 0.5s steps(6, end) forwards 4s,
-  caret-delete 0.5s steps(6, end) forwards 6s,
-  caret-type 0.5s steps(6, end) forwards 7s,
-  hide-thing forwards 7.9s;
+  border-right: .08em solid var(--green);
+  width: 1px;
+  height: 1.2em;
+  animation: blink-caret 0.5s step-end infinite, 
+  caret-type-long 0.5s steps(6, end) forwards 1s,
+  caret-delete 0.5s steps(6, end) forwards 2.5s,
+  caret-type 0.5s steps(6, end) forwards 3s,
+  caret-delete 0.5s steps(6, end) forwards 4.5s,
+  caret-type 0.5s steps(6, end) forwards 5s,
+  hide-element 0.1s forwards 6s;
+
 }
 
+
+.sites {
+  /* width: fit-content; */
+  translate: 0px -100%;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: type-long 0.5s steps(6, end) forwards 1s, delete 0.5s steps(6, end) forwards 2.5s;
+}
+
+.apps {
+  translate: 0px -200%;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: type 0.5s steps(6, end) forwards 3s, delete 0.5s steps(6, end) forwards 4.5s;
+}
+
+.stuff {
+  translate: 0px -300%;
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: type 0.5s steps(6, end) forwards 5s;
+}
+
+
+
 @keyframes caret-delete {
-  100% {translate: 0px 10px;}
+  100% {translate: 0px;}
 }
 
 @keyframes caret-type {
-  100% {translate: 100px 10px;}
+  100% {translate: 100px;}
+}
+
+@keyframes caret-type-long {
+  100% {translate: 170px;}
 }
 
 @keyframes type {
+  0% {width: 0px;}
   100% {width: 100px;}
+}
+
+@keyframes type-long {
+  0% {width: 0px;}
+  100% {width: 170px;}
 }
 
 @keyframes delete {
@@ -273,19 +294,9 @@ h1 {
   50% {border-right: .05em solid var(--green);}
 }
 
-@keyframes hide-thing2 {
-  0%,99.8% {opacity: 1;}
+@keyframes hide-element {
   100% {opacity: 0;}
 }
-
-@keyframes hide-thing {
-  100% {opacity: 0;}
-}
-
-
-
-
-
 
 
 
@@ -305,16 +316,6 @@ h1 p:nth-child(3){
   animation: dissolve 2s ease-in-out forwards;
 }
 
-/* h1 p:nth-child(1){
-  animation: dissolve 1s ease-in-out forwards;
-}
-
-h1 p:nth-child(2){
-  animation: dissolve 1.5s ease-in-out forwards;
-}
-h1 p:nth-child(3){
-  animation: dissolve 2s ease-in-out forwards;
-} */
 
 /* Links */
 .links {
@@ -348,11 +349,11 @@ h1 p:nth-child(3){
 }
 
 .links div:nth-child(1){
-  animation: dissolve 1s normal 1.6s forwards;
+  animation: dissolve 1s normal 6s forwards;
 }
 
 .links div:nth-child(2){
-  animation: dissolve 1s normal 2s forwards;
+  animation: dissolve 1s normal 6.5s forwards;
 }
 
 @keyframes wiggle {
