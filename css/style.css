@@ -65,15 +65,14 @@ body {
 }
 
 
-
-
-
-
-
 /* Navigation */
 .nav-cont-cont {
   position: fixed;
   top: 0;
+}
+
+.nav-left {
+  display: none;
 }
 
 .nav-container {
@@ -188,12 +187,6 @@ body {
 }
 
 
-
-
-
-
-
-
 /* Main body */
 main {
   z-index: -1;
@@ -203,6 +196,11 @@ main {
 .intro {
   margin-top:200px;
   line-height: 1.2;
+}
+
+.hand-emoji {
+  display: inline-block;
+  animation: wiggle 3s 3;
 }
 
 h1 {
@@ -235,7 +233,6 @@ h1 {
 
 }
 
-
 .sites {
   /* width: fit-content; */
   translate: 0px -100%;
@@ -260,8 +257,6 @@ h1 {
   white-space: nowrap;
   animation: type 0.5s steps(6, end) forwards 5s;
 }
-
-
 
 @keyframes caret-delete {
   100% {translate: 0px;}
@@ -298,8 +293,6 @@ h1 {
   100% {opacity: 0;}
 }
 
-
-
 /* Intro text animation */
 h1 p {
   opacity: 0;
@@ -315,7 +308,6 @@ h1 p:nth-child(2){
 h1 p:nth-child(3){
   animation: dissolve 2s ease-in-out forwards;
 }
-
 
 /* Links */
 .links {
@@ -369,10 +361,6 @@ h1 p:nth-child(3){
     opacity: 1;
   }
 }
-
-
-
-
 
 /* Footer */
 footer {
