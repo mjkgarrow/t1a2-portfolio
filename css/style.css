@@ -15,6 +15,7 @@
 :root {
   --green: #5fecc8;
   --blue: #5e62d1;
+  --muted-green: #87ccbb;
 }
 
 /* CSS reseting */
@@ -196,7 +197,7 @@ main {
 /* Introductory text */
 .intro-container {
   display: flex;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .intro {
@@ -372,13 +373,17 @@ footer {
   position:fixed;
   width: 100%;
   bottom: 0;
-  background-color: var(--green);
+  background-color: #21252c;
 }
 
-footer p {
-  color: var(--blue);
-  padding: 10px 60px;
-  font-size: 0.8em;
+.acknowledgement {
+  color: var(--green);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  height: 2.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coding {
@@ -387,6 +392,7 @@ footer p {
   justify-content: space-between;
   font-family: 'Courier New', Courier, monospace;
   height: 2em;
+  border-bottom: 1px solid #5fecc8;
 }
 
 .left-code {
@@ -421,14 +427,13 @@ footer p {
 
 
 .coding-gif {
+  display: none;
   width: 200px;
   height: 300px;
   border-radius: 10px;
   object-fit: cover;
   object-position: 3% 0;
 }
-
-
 
 /* Joke text for responsive display */
 .joke {
@@ -454,6 +459,17 @@ footer p {
 }
 
 /* For tablet */
-@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 819px) {
+  .intro {
 
+    transform: scale(1.5);
+    translate: 60% 300px;
+  }
+  .nav-right {
+    display: none;
+  }
+
+  .nav-left {
+    display: inline;
+  }
 }
