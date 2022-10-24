@@ -223,71 +223,59 @@ h1 {
 /* Text animation */
 .text-animation {
   height: 1.2em;
+  width: fit-content;
 }
 
-.caret {
-  border-right: .08em solid var(--green);
-  width: 1px;
-  height: 1.2em;
-  animation: blink-caret 0.5s step-end infinite, 
-  caret-type-long 0.5s steps(6, end) forwards 1s,
-  caret-delete 0.5s steps(6, end) forwards 2.5s,
-  caret-type 0.5s steps(6, end) forwards 3s,
-  caret-delete 0.5s steps(6, end) forwards 4.5s,
-  caret-type 0.5s steps(6, end) forwards 5s,
-  hide-element 0.1s forwards 6s;
-
+.s, .a, .st {
+  width: fit-content;
+  position: absolute;
 }
 
 .sites {
-  /* width: fit-content; */
-  translate: 0px -100%;
   width: 0px;
   overflow: hidden;
   white-space: nowrap;
-  animation: type-long 0.5s steps(6, end) forwards 1s, delete 0.5s steps(6, end) forwards 2.5s;
+  margin-right: 8px;
+  border-right: .08em solid var(--green);
+  animation: blink-caret 0.5s step-end infinite, 
+  type-new 0.5s steps(6, end) forwards, 
+  delete-new 0.5s steps(6) forwards 2.5s, 
+  hide-element forwards 3.1s;
 }
 
 .apps {
-  translate: 0px -200%;
-  width: 0px;
+  width: 0%;
   overflow: hidden;
   white-space: nowrap;
-  animation: type 0.5s steps(6, end) forwards 3s, delete 0.5s steps(6, end) forwards 4.5s;
+  margin-right: 8px;
+  animation: blink-caret 0.5s step-end infinite 3s, 
+  type-new 0.5s steps(6) forwards 3s, 
+  delete-new 0.5s steps(6) forwards 5.5s, 
+  hide-element 0.1s forwards 6.1s;
 }
 
 .stuff {
-  translate: 0px -300%;
-  width: 0px;
+  width: 0%;
   overflow: hidden;
   white-space: nowrap;
-  animation: type 0.5s steps(6, end) forwards 5s;
+  margin-right: 8px;
+  animation: blink-caret 0.5s step-end infinite 6s, 
+  type-new 0.5s steps(6) forwards 6s,
+  stop-blink 0.1s forwards 6.6s;
 }
 
-@keyframes caret-delete {
-  100% {translate: 0px;}
+@keyframes type-new {
+  0% {width: 0%;}
+  100% {width: 100%;}
 }
 
-@keyframes caret-type {
-  100% {translate: 100px;}
+@keyframes delete-new {
+  to {width: 0%;}
 }
 
-@keyframes caret-type-long {
-  100% {translate: 170px;}
-}
-
-@keyframes type {
-  0% {width: 0px;}
-  100% {width: 100px;}
-}
-
-@keyframes type-long {
-  0% {width: 0px;}
-  100% {width: 170px;}
-}
-
-@keyframes delete {
-  100% {width: 0px;}
+@keyframes hide-element {
+  0%,99% {opacity: 1;}
+  100% {opacity: 0;}
 }
 
 @keyframes blink-caret {
@@ -295,31 +283,14 @@ h1 {
   50% {border-right: .05em solid var(--green);}
 }
 
-@keyframes hide-element {
-  100% {opacity: 0;}
-}
-
-/* Intro text animation */
-h1 p {
-  opacity: 0;
-}
-
-h1 p:nth-child(1){
-  animation: dissolve 1.2s ease-in-out forwards;
-}
-
-h1 p:nth-child(2){
-  animation: dissolve 0.7s ease-in-out forwards;
-}
-h1 p:nth-child(3){
-  animation: dissolve 2s ease-in-out forwards;
+@keyframes stop-blink {
+  to {border-right: .05em solid transparent;}
 }
 
 /* Links */
 .links {
   text-align: end;
   padding-right: 10%;
-
   color: white;
 }
 
@@ -473,7 +444,7 @@ footer {
   .nav-left {
     display: inline;
     /* min-width: 820px; */
-    transform: scale(80%);
+    transform: scale(60%);
   }
 
   .nav-list-container {
@@ -488,11 +459,11 @@ footer {
   .nav-list {
     display: flex;
     font-size: 3em;
-    color: var(--blue);
+    color: var(--blue);;
   }
 
   .nav-list div {
-    padding: 0 25px;
+    padding: 0 30px;
   }
 
 
@@ -503,11 +474,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    translate: 0 37vh;
+    translate: 0 20vh;
   }
 
   .intro {
-    transform: scale(1.5);
+    transform: scale(0.8);
   }
 
   .intro-container {
@@ -515,7 +486,7 @@ footer {
   }
 
   .links {
-    font-size: 2em;
+    font-size: 1em;
     padding: 0 0 0 10%;
   }  
 }
