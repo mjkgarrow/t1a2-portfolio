@@ -51,8 +51,6 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-
-
 /* Setting up fonts, colours, direction */
 body {
   background-color: var(--blue);
@@ -64,10 +62,13 @@ body {
   flex-direction: column;
 }
 
-
 /* Navigation */
-.nav-cont-cont {
+header {
   position: fixed;
+  width: 100%;
+}
+
+.nav-cont-cont {
   top: 0;
 }
 
@@ -193,8 +194,12 @@ main {
 }
 
 /* Introductory text */
+.intro-container {
+  display: flex;
+  margin-top: 100px;
+}
+
 .intro {
-  margin-top:200px;
   line-height: 1.2;
 }
 
@@ -312,8 +317,8 @@ h1 p:nth-child(3){
 /* Links */
 .links {
   text-align: end;
-  padding-right: 30px;
-  margin-top: 40px;
+  padding-right: 10%;
+
   color: white;
 }
 
@@ -409,6 +414,46 @@ footer p {
 }
 
 .right-code div {
-  padding: 0 7px;
+  padding: 0 10px;
 }
 
+
+
+
+.coding-gif {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 3% 0;
+}
+
+
+
+/* Joke text for responsive display */
+.joke {
+  display: none;
+  position: relative;
+  top: 50%;
+  margin: -10px auto;
+}
+
+@media only screen and (max-width: 350px) {
+  .joke {
+    display: block;
+  }
+  header {
+    display: none;
+  }
+  main {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}
+
+/* For tablet */
+@media only screen and (min-width: 820px) {
+
+}
