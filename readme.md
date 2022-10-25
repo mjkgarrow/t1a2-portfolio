@@ -13,3 +13,5 @@ Current state of website:
 Wireframe:
 
 ![Wireframe WIP](./images/WIP%20Index%20wireframe.png)
+
+[Figma link](https://www.figma.com/file/efpb32yzwvxEcuG2w1a3IM/Portfolio)

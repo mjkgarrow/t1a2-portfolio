@@ -218,6 +218,10 @@ header {
 
 }
 
+.card-container {
+  display: none;
+}
+
 /* Introductory text */
 .intro {
   line-height: 1.2;
@@ -464,7 +468,6 @@ footer {
 
   .nav-left {
     display: inline;
-    /* min-width: 820px; */
     transform: scale(60%);
   }
 
@@ -473,7 +476,7 @@ footer {
     display: flex;
     justify-content: space-around;
     border-radius: 4em;
-    margin-top: 10%;
+    margin-top: 5%;
     box-shadow: 5px 10px 50px -20px #21252c;
   }
 
@@ -518,9 +521,17 @@ footer {
   }
 
   .links {
+    display: none;
     font-size: 1em;
     padding: 0 0 0 10%;
-  }  
+  } 
+
+  .card-container {
+    display: flex;
+  }
+  
+  
+
 }
 
 @media only screen and (min-width: 1200px){
