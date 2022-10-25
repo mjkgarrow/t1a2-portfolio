@@ -32,21 +32,16 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
+
 input, button, textarea, select {
   font: inherit;
 }
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-
 a {
   text-decoration: none;
 }
-
 a, a:visited, a:hover, a:active {
   color: inherit;
   text-decoration: none;
@@ -57,7 +52,8 @@ body {
   background-color: var(--blue);
   color: var(--green);
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -190,18 +186,42 @@ header {
 
 
 /* Main body */
-main {
+.main-container {
   z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.memoji-container {
+  display: flex;
+  justify-content: center;
+}
+
+.memoji-img {
+  max-width: 50%;
+  animation: memoji-animation 10s ease-in infinite;
+}
+
+@keyframes memoji-animation {
+  from, to, 50% {translate: 0 0; rotate: 0deg;}
+  25% {translate: 10px 10px; rotate: 3deg;}
+  75% {translate: -10px 10px; rotate: -3deg;}
+
 }
 
 /* Introductory text */
-.intro-container {
-  display: flex;
-  margin-top: 150px;
-}
-
 .intro {
   line-height: 1.2;
+  min-width: fit-content;
 }
 
 .hand-emoji {
@@ -217,7 +237,7 @@ h1 {
 }
 
 .bold-text-color {
-  color: #5fecc8;
+  color: var(--green);
 }
 
 /* Text animation */
@@ -238,9 +258,9 @@ h1 {
   margin-right: 8px;
   border-right: .08em solid var(--green);
   animation: blink-caret 0.5s step-end infinite, 
-  type-new 0.5s steps(6, end) forwards, 
-  delete-new 0.5s steps(6) forwards 2.5s, 
-  hide-element forwards 3.1s;
+  type-new 0.5s steps(6, end) forwards 1s, 
+  delete-new 0.5s steps(6) forwards 3.5s, 
+  hide-element forwards 4.1s;
 }
 
 .apps {
@@ -248,10 +268,10 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   margin-right: 8px;
-  animation: blink-caret 0.5s step-end infinite 3s, 
-  type-new 0.5s steps(6) forwards 3s, 
-  delete-new 0.5s steps(6) forwards 5.5s, 
-  hide-element 0.1s forwards 6.1s;
+  animation: blink-caret 0.5s step-end infinite 4s, 
+  type-new 0.5s steps(6) forwards 4s, 
+  delete-new 0.5s steps(6) forwards 6.5s, 
+  hide-element 0.1s forwards 7.1s;
 }
 
 .stuff {
@@ -259,9 +279,9 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   margin-right: 8px;
-  animation: blink-caret 0.5s step-end infinite 6s, 
-  type-new 0.5s steps(6) forwards 6s,
-  stop-blink 0.1s forwards 6.6s;
+  animation: blink-caret 0.5s step-end infinite 7s, 
+  type-new 0.5s steps(6) forwards 7s,
+  stop-blink 0.1s forwards 7.6s;
 }
 
 @keyframes type-new {
@@ -290,8 +310,10 @@ h1 {
 /* Links */
 .links {
   text-align: end;
-  padding-right: 10%;
+  /* padding-right: 10%; */
   color: white;
+  font-size: 0.9em;
+  translate: 0 -30%;
 }
 
 .links div {
@@ -318,11 +340,11 @@ h1 {
 }
 
 .links div:nth-child(1){
-  animation: dissolve 1s normal 6s forwards;
+  animation: dissolve 1s normal 7.5s forwards;
 }
 
 .links div:nth-child(2){
-  animation: dissolve 1s normal 6.5s forwards;
+  animation: dissolve 1s normal 8s forwards;
 }
 
 @keyframes wiggle {
@@ -338,6 +360,7 @@ h1 {
     opacity: 1;
   }
 }
+
 
 /* Footer */
 footer {
@@ -430,9 +453,7 @@ footer {
 }
 
 /* For tablet */
-@media only screen and (min-width: 819px) {
-
-
+@media only screen and (min-width: 600px) {
   .nav-container {
     justify-content: center;
   }
@@ -466,27 +487,42 @@ footer {
     padding: 0 30px;
   }
 
-
-
-
   /* Main container */
   .main-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    height: 100%;
     align-items: center;
-    translate: 0 20vh;
   }
 
   .intro {
-    transform: scale(0.8);
+    font-size: 1.5em;
   }
 
   .intro-container {
+    display: flex;
     margin: 0;
+    flex-direction: row;
+  }
+
+  .memoji-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: 0 -10%;
+
+  }
+
+  .memoji-img {
+    max-width: 80%;
   }
 
   .links {
     font-size: 1em;
     padding: 0 0 0 10%;
   }  
+}
+
+@media only screen and (min-width: 1200px){
+  
 }
