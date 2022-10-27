@@ -135,13 +135,12 @@ nav.active {
   margin-top: 70px;
 }
 
-.intro-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10%;
+.intro {
+  line-height: 1.2;
+  min-width: fit-content;
 }
 
+/* Animation for memoji image */
 .memoji-container {
   display: flex;
   justify-content: center;
@@ -158,14 +157,12 @@ nav.active {
   75% {translate: -10px 10px; rotate: -3deg;}
 }
 
-.card-container {
-  display: none;
-}
-
 /* Introductory text */
-.intro {
-  line-height: 1.2;
-  min-width: fit-content;
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
 }
 
 .hand-emoji {
@@ -173,7 +170,16 @@ nav.active {
   animation: wiggle 3s 3;
 }
 
-h1 {
+.intro-content {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  font-size: 3em;
+  padding: 15px;
+}
+
+.intro-h1 {
   text-align: left;
   color: white;
   font-size: 3em;
