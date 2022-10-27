@@ -11,58 +11,40 @@
 <body>
   <!-- Navigation area -->
   <header>
-    <nav class="nav-cont-cont">
-      <div class="nav-container">
-        <div class="nav-left">
-          <div class="nav-list-container">
-            <div class="nav-list">
-              <div><a href="">Home</a></div>
-              <div><a href="">About me</a></div>
-              <div><a href="">My work</a></div>
-              <div><a href="">Skills</a></div>
-              <div><a href="">Blog</a></div>
-              <div><a href="">Contact</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="nav-right">
-          <!-- Dropdown menu -->
-          <div class="tabs">
-            <div class="tab">
-              <!-- Burger icon button -->
-              <input type="radio" id="tab-1" name="tab-group-1" />
-              <label for="tab-1">
-                <i class="fa fa-bars burger-icon" aria-hidden="true"></i>
-              </label>
-
-              <!-- Cross icon button -->
-              <div class="tab close-tab">
-                <input type="radio" id="tab-close" name="tab-group-1" />
-                <label for="tab-close">
-                  <i class="fa-solid fa-xmark close-icon"></i>
-                </label>
-              </div>
-          
-              <!-- Menu list -->
-              <div class="content">
-                <ul>
-                  <li><a href="">Home</a></li>
-                  <li><a href="">About me</a></li>
-                  <li><a href="">My work</a></li>
-                  <li><a href="">Skills</a></li>
-                  <li><a href="">Blog</a></li>
-                  <li><a href="">Contact</a></li>
-                </ul>
-              </div>
-            </div>
+    <div class="noselect nav-container">
+      <div class="nav-left">
+        <div class="nav-list-container">
+          <div class="nav-list">
+            <div><a href="">Home</a></div>
+            <div><a href="">About me</a></div>
+            <div><a href="">My work</a></div>
+            <div><a href="">Skills</a></div>
+            <div><a href="">Blog</a></div>
+            <div><a href="">Contact</a></div>
           </div>
         </div>
       </div>
-    </nav>
+      <div class="nav-right">
+        <label class="noselect" for="check">
+          <input class="noselect" type="checkbox" id="check"/>
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="content">
+            <a href="">Home</a>
+            <a href="">About me</a>
+            <a href="">My work</a>
+            <a href="">Skills</a>
+            <a href="">Blog</a>
+            <a href="">Contact</a>
+          </div>
+        </label>
+      </div>
+    </div>
   </header>
 
   <!-- Main area -->
-  <main class="main-container">
+  <!-- <main class="main-container">
     <section class="intro-container">
       <div class="intro">
         <h1 class="intro-h1">
@@ -92,11 +74,20 @@
       </div>
     </section>
 
-    <section class="">
+    <section class="text">
       <div>
         <h2>My process</h2>
-        <p>I design clean and beautiful websites in close collaboration  with clients.</p>
-        <p></p>
+        <p>I'm a junior full-stack developer based in Naarm Melbourne but free to do remote work anywhere.</p>
+      </div>
+    </section>
+    <section class="text">
+      <div>
+        <p>I create elegant, user-friendly and fun websites that are a joy to visit.</p>
+      </div>
+    </section>
+    <section class="text">
+      <div>
+        <p>My passion is telling stories, engaging with the audience and making sure that we are creating the best product possible.</p>
       </div>
     </section>
 
@@ -106,7 +97,7 @@
 
     </section>
 
-  </main>
+  </main> -->
 
   <!-- Footer -->
   <footer>
@@ -126,9 +117,9 @@
         <div>HTML</div>
       </div>
     </div>
-    <div class="acknowledgement">
+    <!-- <div class="acknowledgement">
       <p>Made on the lands of the Wurundjeri people.</p>
-    </div>
+    </div> -->
   </footer>
 
   <!-- Joke -->
