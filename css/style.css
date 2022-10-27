@@ -49,7 +49,7 @@ a, a:visited, a:hover, a:active {
 body {
   background-color: var(--primary-colour);
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   block-size: fit-content;
   display: flex;
@@ -61,6 +61,7 @@ body {
 
 /* Navigation Styling*/
 header {
+  z-index: 1;
   position: sticky;
   top: 0;
   padding: 1rem 1rem .5rem;
@@ -79,6 +80,7 @@ header a {
 a {
   text-decoration: none;
 }
+
 
 header h1 {
   color: var(--primary-colour);
@@ -110,6 +112,12 @@ nav ul {
 
 nav ul li {
   padding: 0 4%;
+  transition:all .3s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(5px);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 nav a {
@@ -126,18 +134,19 @@ nav.active {
 
 /* Main body */
 .main-container {
-  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   justify-content: space-evenly;
   margin-top: 70px;
+  
 }
 
 .intro {
   line-height: 1.2;
   min-width: fit-content;
+  margin-bottom: 10%;
 }
 
 /* Animation for memoji image */
@@ -147,7 +156,7 @@ nav.active {
 }
 
 .memoji-img {
-  max-width: 50%;
+  max-width: 300px;
   animation: memoji-animation 10s ease-in infinite;
 }
 
@@ -162,24 +171,17 @@ nav.active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10%;
+  /* padding: 10%; */
 }
 
 .hand-emoji {
   display: inline-block;
-  animation: wiggle 3s 3;
+  animation: wiggle 3s infinite;
 }
 
 .intro-content {
   font-size: 2em;
   font-weight: bold;
-  text-align: left;
-  color: white;
-  font-size: 3em;
-  padding: 15px;
-}
-
-.intro-h1 {
   text-align: left;
   color: white;
   font-size: 3em;
@@ -234,6 +236,7 @@ nav.active {
   stop-blink 0.1s forwards 7.6s;
 }
 
+/* Keyframs for typing animation and emoji wiggle */
 @keyframes type-new {
   0% {width: 0%;}
   100% {width: 100%;}
@@ -257,24 +260,48 @@ nav.active {
   to {border-right: .05em solid transparent;}
 }
 
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+ 80% { transform: rotate(0deg); }
+ 85% { transform: rotate(10deg); }
+ 95% { transform: rotate(-10deg); }
+100% { transform: rotate(0deg); }
+}
+
+
+/* Text divs in main container*/
 .text {
-  padding: 5% 10% 10% 5%;
-  font-size: 1.5em;
+  padding: 5% 10% 5% 10%;
+  font-size: 1.2em;
   text-align: center;
 }
 
-
-
-
-
+/* Find-me section */
 .find-me {
   background-color: var(--highlight);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  height: fit-content;
-  flex: 1;
+  height: 200px;
+  margin-top: 10%;
+  margin-bottom: 2em;
 }
 
+.find-me div {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 
+}
+
+i:hover {
+  transform: scale(1.5);
+  color: var(--secondary-colour);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
 /* Footer */
 footer {
@@ -300,7 +327,6 @@ footer {
   justify-content: space-between;
   font-family: 'Courier New', Courier, monospace;
   height: 2em;
-  border-bottom: 1px solid #5fecc8;
 }
 
 .left-code {
@@ -331,18 +357,6 @@ footer {
   padding: 0 10px;
 }
 
-
-
-
-.coding-gif {
-  display: none;
-  width: 200px;
-  height: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: 3% 0;
-}
-
 /* Joke text for responsive display */
 .joke {
   display: none;
@@ -368,78 +382,88 @@ footer {
 
 /* For tablet */
 @media only screen and (min-width: 600px) {
-  .nav-container {
-    justify-content: center;
-  }
-
-  .nav-scroll {
-    display: none;
-  }
-
-  .nav-bar {
-    display: inline;
-    transform: scale(60%);
-  }
-
-  .nav-list-container {
-    background-color: var(--secondary-colour);
-    display: flex;
-    justify-content: space-around;
-    border-radius: 4em;
-    margin-top: 5%;
-    box-shadow: 5px 10px 50px -20px #21252c;
-  }
-
-  .nav-list {
-    display: flex;
-    font-size: 3em;
-    color: var(--primary-colour);;
-  }
-
-  .nav-list div {
-    padding: 0 30px;
-  }
-
-  /* Main container */
   .main-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
+    margin-top: 90px;
   }
-
+  
   .intro {
-    font-size: 1.5em;
+    display: flex;
+    width: fit-content;
   }
 
   .intro-container {
-    display: flex;
-    margin: 0;
-    flex-direction: row;
+    padding: 0;
   }
 
-  .memoji-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    translate: 0 -10%;
+  .memoji-content {
+    translate: 0 -40px;
   }
 
-  .memoji-img {
-    max-width: 80%;
-  }
-
-  .links {
-    display: none;
-    font-size: 1em;
-    padding: 0 0 0 10%;
-  } 
-
-  .card-container {
-    display: flex;
-  }
 }
 
 @media only screen and (min-width: 1200px){
+  header {
+    all:unset;
+    padding: 16px 16px 0 0;
+  }
+
+  nav {
+    all:unset;
+  }
+
+  nav ul {
+    all: unset;
+    font-size: 1.5em;
+    justify-content: end;
+    display: flex;
+    list-style: none;
+  }
+
+  nav ul li {
+    height: 100%;
+    padding: 0 1%;
+  }
+
+  nav ul li:hover {
+    transform: translateY(5px);
+    color: var(--secondary-colour);
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
   
+  .intro {
+    margin-bottom: 15%;
+
+  }
+
+  .intro-content{
+    font-size: 4.4em;
+  }
+
+  .memoji-content {
+    all:unset;
+    translate: 40px 0;
+    width: 100%;
+
+  }
+
+  .memoji-img {
+    max-width: 370px;
+  }
+
+  .text {
+    align-self: start;
+    padding: 10px 0 0 100px;
+    text-align: initial;
+  }
+
+  .find-me {
+    display: flex;
+    height: 4em;
+    flex-direction: row;
+    justify-content: center;
+}
+
+  .find-me div {
+    width: 50%;
+  }
 }
