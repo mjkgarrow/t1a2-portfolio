@@ -7,6 +7,7 @@
   --ternary-colour: #9ea979;
   --highlight: #5E6548ff;
   --bold-text: #c9a042;
+  --box-colour: #162a37;
 }
 
 /* CSS reseting */
@@ -127,7 +128,7 @@ nav a {
 .intro {
   line-height: 1.2;
   min-width: fit-content;
-  margin-bottom: 10%;
+  margin-bottom: 20%;
 }
 
 /* Animation for memoji image */
@@ -266,7 +267,7 @@ nav a {
 }
 
 .text div p {
-  padding: 0 0 30px 0;
+  padding: 0 0 1em 0;
 }
 
 .text div {
@@ -302,7 +303,7 @@ nav a {
 }
 
 
-/* Styling for skills page main section */
+/* Styling for Skills page main section */
 .skill-text {
   flex-direction: column;
   align-items: center;
@@ -314,7 +315,6 @@ nav a {
   margin-bottom: 15px;
 }
 
-
 .skill-item {
   font-size: 4em;
   transition: all 0.3s ease-in-out
@@ -323,6 +323,60 @@ nav a {
 .skill-item:hover {
   color: var(--ternary-colour);
   transition: color 0.3s ease-in-out;
+}
+
+
+/* Styling for Projects page */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 20px;
+  width: 85%;
+  height: 85%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--box-colour);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 30px 0px;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-content h2{
+  padding: 0 0 10px 0;
+  color: var(--secondary-colour);
+}
+
+.projects-content p {
+  padding: 10px 0 10px 0;
+  width: 70%;
+  font-size: 0.8em;
+}
+
+.projects-content a img {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 20px;
+  padding: 0 0 10px 0;
+}
+
+.projects-content div {
+  align-self: start;
+  padding: 0 0 0 15%;
 }
 
 
@@ -399,6 +453,7 @@ nav a {
 
 /* For tablet */
 @media only screen and (min-width: 600px) {
+  /* Navigation */
   header {
     width: 100%;
     justify-content: end;
@@ -409,6 +464,7 @@ nav a {
     width: 90vw;
   }
 
+  /* Main section for home page */
   .main-container {
     margin-top: 90px;
   }
@@ -418,6 +474,7 @@ nav a {
   }
   
   .intro {
+    margin-bottom: 10%;
     display: flex;
     width: fit-content;
   }
@@ -434,18 +491,29 @@ nav a {
     font-size: 1.5em;
   }
 
+
+  /* About me page styling */
   .about-text {
     font-size: 3em;
   }
-  
+
+  /* Projects page styling */
+  .projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* Footer section */
   .find-me div {
     flex-direction: row;
     width: 50%;
     align-items: center;
   }
+
   .find-me div div {
     width: 50%;
   }
+
   .find-me div h1 {
     width: 50%;
   }
@@ -540,27 +608,14 @@ nav a {
     transition: color 0.3s ease-in-out;
   }
 
+  .projects {
+    width: 100%;
+  }
 
-  #expend {
-    display:none;  
-  }
-  
-  #expend + .smalldesc {
-    max-height:52px;
-    overflow:hidden;
-    transition:all .3s ease;
-  }
-  
-  #expend:checked + .smalldesc {
-    max-height:250px;  
-  }
-  
-  label {
-    cursor:pointer;
-  }
-  
-  label:hover {
-    text-decoration:none;  
+
+  /* Project page styling */
+  .projects-container {
+    max-height: 470px;
   }
 
 
