@@ -2,18 +2,12 @@
 
 /* Colour scheme */
 :root {
-  --primary-colour: #5e62d1;
-  --secondary-colour: #5fecc8;
-  --highlight: #142632ff;
-
   --primary-colour: #142632ff;
   --secondary-colour: #D2823Bff;
   --ternary-colour: #9ea979;
   --highlight: #5E6548ff;
   --bold-text: #c9a042;
 }
-
-
 
 /* CSS reseting */
 *, *::before, *::after {
@@ -43,15 +37,6 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-/* Make text unselectable */
-.noselect {
-  -webkit-touch-callout: none; 
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 /* Setting up fonts, colours, direction */
 body {
@@ -65,11 +50,9 @@ body {
   min-width: 200px;
 }
 
-
-
-
-/* Navigation Styling*/
+/* Navigation Styling */
 header {
+  translate: 0 -5px;
   z-index: 1;
   position: sticky;
   top: 0;
@@ -86,11 +69,6 @@ header a {
   top: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-
 header h1 {
   color: var(--primary-colour);
   padding: 0;
@@ -101,7 +79,7 @@ header h1 {
 
 nav {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   height: 2.5rem;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -133,11 +111,7 @@ nav a {
   display: block;
   padding: .5rem .75rem;
 }
-  
-nav.active {
-  color: #fff;
-  font-weight: 600;
-}
+
 
 
 /* Main body */
@@ -148,7 +122,6 @@ nav.active {
   height: 100%;
   justify-content: space-evenly;
   margin-top: 70px;
-  
 }
 
 .intro {
@@ -200,7 +173,7 @@ nav.active {
   color: var(--bold-text);
 }
 
-/* Text animation */
+/* Intro text animation */
 .text-animation {
   height: 1.2em;
   width: fit-content;
@@ -281,7 +254,7 @@ nav.active {
 .text {
   padding: 5% 10% 5% 10%;
   /* margin-right: 10%; */
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: left;
   width: 100%;
   display: flex;
@@ -293,7 +266,7 @@ nav.active {
 }
 
 .text div p {
-  padding: 4% 0;
+  padding: 0 0 30px 0;
 }
 
 .text div {
@@ -311,7 +284,27 @@ nav.active {
 }
 
 
-/* Find-me section */
+/* Styling for About page main section */
+.main-about {
+  margin-top: 0;
+}
+.about-img {
+  max-width: 200px;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex-direction: column;
+  align-items: center;
+  background-image: none;
+  font-size: 2em;
+}
+
+
+
+
+/* Find-me footer */
 .find-me {
   background-color: var(--highlight);
   display: flex;
@@ -361,16 +354,20 @@ i:hover {
   .joke {
     display: block;
   }
+
   body {
     height: 100vh;
   }
+
   header {
     all:unset;
     display: none;
   }
+
   .main-container {
     display: none;
   }
+
   .find-me {
     all:unset;
     display: none;
@@ -392,6 +389,10 @@ i:hover {
   .main-container {
     margin-top: 90px;
   }
+
+  .main-about {
+    margin-top: 0;
+  }
   
   .intro {
     display: flex;
@@ -408,6 +409,10 @@ i:hover {
 
   .text {
     font-size: 1.5em;
+  }
+
+  .about-text {
+    font-size: 3em;
   }
   
   .find-me div {
@@ -429,8 +434,6 @@ i:hover {
 }
 
 @media only screen and (min-width: 1000px){
-
-
   header {
     width: inherit;
     justify-content: end;
@@ -474,6 +477,10 @@ i:hover {
     width: 100%;
   }
 
+  .about-text {
+    font-size: 3em;
+  }
+
   .text div {
     width: 50%;
   }
@@ -487,12 +494,15 @@ i:hover {
     width: 50%;
     align-items: center;
   }
+
   .find-me div div {
     width: 50%;
   }
+
   .find-me div h1 {
     width: 50%;
   }
+
   .find-me div div div span {
     padding: 0px 30px;
   }
