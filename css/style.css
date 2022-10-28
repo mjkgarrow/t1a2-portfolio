@@ -252,7 +252,7 @@ nav a {
 
 /* Text divs in main container*/
 .text {
-  padding: 5% 10% 5% 10%;
+  padding: 0 10% 5% 10%;
   /* margin-right: 10%; */
   font-size: 1em;
   text-align: left;
@@ -302,6 +302,29 @@ nav a {
 }
 
 
+/* Styling for skills page main section */
+.skill-text {
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.skill-text div {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.skill-item {
+  font-size: 4em;
+  transition: all 0.3s ease-in-out
+}
+
+.skill-item:hover {
+  color: var(--ternary-colour);
+  transition: color 0.3s ease-in-out;
+}
+
 
 
 /* Find-me footer */
@@ -332,10 +355,10 @@ nav a {
   flex-direction: row;
 }
 
-i {
+.find-me-icon {
   transition: all 0.3s ease-in-out
 }
-i:hover {
+.find-me-icon:hover {
   transform: scale(1.5);
   color: var(--secondary-colour);
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -506,5 +529,39 @@ i:hover {
   .find-me div div div span {
     padding: 0px 30px;
   }
+
+  /* Skills styling */
+  .skill-text div {
+    padding: 2% 0 5% 0;
+  }
+
+  .skill-item:hover {
+    color: var(--ternary-colour);
+    transition: color 0.3s ease-in-out;
+  }
+
+
+  #expend {
+    display:none;  
+  }
+  
+  #expend + .smalldesc {
+    max-height:52px;
+    overflow:hidden;
+    transition:all .3s ease;
+  }
+  
+  #expend:checked + .smalldesc {
+    max-height:250px;  
+  }
+  
+  label {
+    cursor:pointer;
+  }
+  
+  label:hover {
+    text-decoration:none;  
+  }
+
 
 }
