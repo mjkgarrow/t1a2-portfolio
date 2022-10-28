@@ -6,25 +6,11 @@
   --secondary-colour: #5fecc8;
   --highlight: #142632ff;
 
-  /* --primary-colour: #142632ff;
+  --primary-colour: #142632ff;
   --secondary-colour: #D2823Bff;
-  --highlight: #8E3829ff; */
-
-  --gunmetal: #142632ff;
-  --xanadu: #6C827Fff;
-  --bronze: #D2823Bff;
-  --burnt-umber: #8E3829ff;
-  --copper-red: #D4704Cff;
-  --melon: #E5B0A0ff;
-  --pewter-blue: #91ACBFff;
-
-
-
-  --rich-black-fogra-29: #051C2Bff;
-  --charcoal: #204A60ff;
-  --burnt-orange: #B95300ff;
-  --gamboge: #ED9B04ff;
-  --peach: #FBDE9Dff;
+  --ternary-colour: #9ea979;
+  --highlight: #5E6548ff;
+  --bold-text: #c9a042;
 }
 
 
@@ -76,6 +62,7 @@ body {
   block-size: fit-content;
   display: flex;
   flex-direction: column;
+  min-width: 200px;
 }
 
 
@@ -87,10 +74,10 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem 1rem .5rem;
-  color: var(--primary-colour);
+  color: var(--secondary-colour);
+  background-color: var(--primary-colour);
   text-align: center;
-  background-color: var(--secondary-colour);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-bottom: 1px solid var(--secondary-colour);
 }
   
 header a {
@@ -139,7 +126,7 @@ nav ul li {
 
 nav ul li:hover {
   transform: translateY(5px);
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 nav a {
@@ -153,11 +140,8 @@ nav.active {
 }
 
 
-
 /* Main body */
 .main-container {
-  background-image: linear-gradient(var(--primary-colour), var(--ternary-colour));
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,7 +197,7 @@ nav.active {
 }
 
 .bold-text-color {
-  color: var(--secondary-colour);
+  color: var(--bold-text);
 }
 
 /* Text animation */
@@ -296,9 +280,36 @@ nav.active {
 /* Text divs in main container*/
 .text {
   padding: 5% 10% 5% 10%;
-  font-size: 1.2em;
-  text-align: center;
+  /* margin-right: 10%; */
+  font-size: 0.9em;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(#ccc,#ccc);
+  background-size: 50% 2px;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
+
+.text div p {
+  padding: 4% 0;
+}
+
+.text div {
+  width: 80%;
+}
+
+.text h2 {
+  color: var(--secondary-colour);
+  padding: 5% 0;
+  font-size: 1.6em;
+}
+
+.text div p a {
+  color: var(--ternary-colour);
+}
+
 
 /* Find-me section */
 .find-me {
@@ -308,78 +319,35 @@ nav.active {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 200px;
+  height: 160px;
   margin-top: 10%;
-  margin-bottom: 2em;
 }
 
 .find-me div {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding: 15px 0 15px 0;
+}
+
+.find-me div div {
+  display: flex;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-
+  flex-direction: row;
 }
 
+i {
+  transition: all 0.3s ease-in-out
+}
 i:hover {
   transform: scale(1.5);
   color: var(--secondary-colour);
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Footer */
-footer {
-  position:fixed;
-  width: 100%;
-  bottom: 0;
-  background-color: #21252c;
-}
-
-.acknowledgement {
-  color: var(--secondary-colour);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.9em;
-  height: 2.1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.coding {
-  display: flex;
-  background-color: #21252c;
-  justify-content: space-between;
-  font-family: 'Courier New', Courier, monospace;
-  height: 2em;
-}
-
-.left-code {
-  display: flex;
-  width: auto;
-  margin-left: 10px;
-  align-items: center;
-}
-
-.left-code div{
-  padding: 0 7px;
-}
-
-.source-icon {
-  width: auto;
-  height: 15px;
-}
-
-.right-code {
-  margin-right: 10px;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.right-code div {
-  padding: 0 10px;
-}
 
 /* Joke text for responsive display */
 .joke {
@@ -389,23 +357,38 @@ footer {
   margin: -10px auto;
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 300px) {
   .joke {
     display: block;
   }
+  body {
+    height: 100vh;
+  }
   header {
+    all:unset;
     display: none;
   }
-  main {
+  .main-container {
     display: none;
   }
-  footer {
+  .find-me {
+    all:unset;
     display: none;
   }
 }
 
 /* For tablet */
 @media only screen and (min-width: 600px) {
+  header {
+    width: 100%;
+    justify-content: end;
+    display: flex;
+  }
+
+  nav ul {
+    width: 90vw;
+  }
+
   .main-container {
     margin-top: 90px;
   }
@@ -423,12 +406,35 @@ footer {
     translate: 0 -40px;
   }
 
+  .text {
+    font-size: 1.5em;
+  }
+  
+  .find-me div {
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+  }
+  .find-me div div {
+    width: 50%;
+  }
+  .find-me div h1 {
+    width: 50%;
+  }
+
+  .find-me div div div span {
+    padding: 0px 30px;
+  }
+
 }
 
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1000px){
+
+
   header {
-    all:unset;
-    padding: 16px 16px 0 0;
+    width: inherit;
+    justify-content: end;
+    display: flex;
   }
 
   nav {
@@ -436,27 +442,14 @@ footer {
   }
 
   nav ul {
-    all: unset;
-    font-size: 1.5em;
-    justify-content: end;
-    display: flex;
+    all:unset;
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
   }
 
-  nav ul li {
-    height: 100%;
-    padding: 0 1%;
-  }
-
-  nav ul li:hover {
-    transform: translateY(5px);
-    color: var(--secondary-colour);
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
   .intro {
-    margin-bottom: 10%;
-
+    margin-bottom: 3%;
   }
 
   .intro-content{
@@ -478,17 +471,30 @@ footer {
     align-self: center;
     padding: 30px 0 0 0;
     text-align: initial;
+    width: 100%;
+  }
+
+  .text div {
     width: 50%;
   }
 
-  .find-me {
-    display: flex;
-    height: 4em;
-    flex-direction: row;
-    justify-content: center;
-}
+  .text h2 {
+    padding: 2% 0;
+  }
 
   .find-me div {
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+  }
+  .find-me div div {
     width: 50%;
   }
+  .find-me div h1 {
+    width: 50%;
+  }
+  .find-me div div div span {
+    padding: 0px 30px;
+  }
+
 }
