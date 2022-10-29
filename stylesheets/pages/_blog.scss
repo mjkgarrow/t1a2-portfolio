@@ -2,32 +2,25 @@
 @import '../componenets/animation';
 @import '../componenets/main-section';
 
-
 // Styling for About page main section
-.main-about {
+.main-blog {
   margin-top: 0;
   .heading {
+    padding: 0;
+  }
+  .blog-list {
+    display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    font-size: 2em;
-    div {
-      width: 80%;
-      p {
-        padding: 0 0 1em 0;
-        a {
-          color: $links-colour;
-        }
+    .list-container {
+      .list-content {
+        padding: 15px;
+        margin: 0 0 30px 0;
+        border-radius: 20px;
+        background-color: $secondary-background;
+        box-shadow: rgb(0 0 0 / 20%) 0px 8px 30px 0px;
       }
-    }
-    h2 {
-      color: $foreground-colour;
-      padding: 5% 0;
-      font-size: 1.6em;
-    }
-    .about-img {
-      max-width: 200px;
-      width: 50%;
-      border-radius: 50%;
     }
   }
 }
@@ -35,20 +28,60 @@
 
 // Tablet break point
 @media only screen and (min-width: 600px) {
-  // About page styling
-  .main-about{
-    .heading {
-      font-size: 3em;
+  // Blog page styling
+  .main-blog {
+    .blog-list {
+      width: 75%;
+      max-width: 900px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      .list-container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        a {
+          padding: 15px;
+          height: 140px;
+          width: 200px;
+          margin: 10px 10px;
+          border-radius: 20px;
+          transition: all 0.3s ease-in-out;
+          background-color: $secondary-background;
+          background: url('../../images/memoji.png');
+          // box-shadow: rgb(0 0 0 / 20%) 0px 8px 30px 0px;
+          &:hover {
+            color: $background-colour;
+            background-color: $foreground-colour;
+          }
+        }
+      }
     }
   }
 }
 
 // Desktop breakpoint
-@media only screen and (min-width: 1000px){
-  // About page styling
-  .main-about {
-    .about-text {
-      font-size: 3em;
+@media only screen and (min-width: 1000px) {
+  // Blog page styling
+  .main-blog {
+    .blog-list {
+      .list-container {
+        a {
+          padding: 15px;
+          height: 200px;
+          width: 230px;
+          margin: 10px 10px;
+          border-radius: 20px;
+          background-color: $secondary-background;
+          // box-shadow: rgb(0 0 0 / 20%) 0px 8px 30px 0px;
+          &:hover {
+            color: $background-colour;
+            background-color: $foreground-colour;
+          }
+        }
+      }
     }
   }
 }
