@@ -8,83 +8,35 @@
 
 // Pages
 @import './pages/home';
+@import './pages/about';
+@import './pages/projects';
+@import './pages/skills';
+
 
 
 // Styling for Skills page main section
-.skill-text {
-  flex-direction: column;
-  align-items: center;
+// .skill-text {
+//   flex-direction: column;
+//   align-items: center;
   
-}
+// }
 
-.skill-text div {
-  text-align: center;
-  margin-bottom: 15px;
-}
+// .skill-text div {
+//   text-align: center;
+//   margin-bottom: 15px;
+// }
 
-.skill-item {
-  font-size: 4em;
-  transition: all 0.3s ease-in-out
-}
+// .skill-item {
+//   font-size: 4em;
+//   transition: all 0.3s ease-in-out;
+// }
 
-.skill-item:hover {
-  color: var(--links-colour);
-  transition: color 0.3s ease-in-out;
-}
+// .skill-item:hover {
+//   color: $links-colour;
+//   transition: color 0.3s ease-in-out;
+// }
 
 
-/* Styling for Projects page */
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 20px;
-  width: 85%;
-  height: 85%;
-  max-width: 400px;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: var(--secondary-background);
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 30px 0px;
-}
-
-.projects-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.projects-content h2{
-  padding: 0 0 10px 0;
-  color: var(--foreground-colour);
-}
-
-.projects-content p {
-  padding: 10px 0 10px 0;
-  width: 70%;
-  font-size: 0.8em;
-}
-
-.projects-content a img {
-  max-width: 250px;
-  max-height: 250px;
-  border-radius: 20px;
-  padding: 0 0 10px 0;
-}
-
-.projects-content div {
-  align-self: start;
-  padding: 0 0 0 15%;
-}
 
 /* For tablet */
 @media only screen and (min-width: 600px) {
@@ -239,7 +191,7 @@
   }
 
   .skill-item:hover {
-    color: var(--links-colour);
+    color: $links-colour;
     transition: color 0.3s ease-in-out;
   }
 

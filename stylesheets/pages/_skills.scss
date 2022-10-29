@@ -1,0 +1,87 @@
+@import '../default/colours';
+@import '../componenets/animation';
+@import '../componenets/main-section';
+
+// Styling for Skills page
+.main-skills{
+  margin-top: 0;
+  .skill-text {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    h2 {
+      color: $foreground-colour;
+      padding: 0 0 5% 0;
+      font-size: 1.5em;
+    }
+    div {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 2.5em;
+      .skill-content {
+        .skill-item {
+          font-size: 4em;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: $links-colour;
+            transition: color 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// For tablet
+@media only screen and (min-width: 600px) {
+  // Skills page styling
+  .main-skills{
+    .skill-text {
+      font-size: 1.5em;
+      div {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 3.5em;
+      }
+    }
+  }
+
+}
+
+// For desktop
+@media only screen and (min-width: 1000px){
+
+  .main-skills{
+    .skill-text {
+      font-size: 2em;
+      h2 {
+        color: $foreground-colour;
+        padding: 0;
+        font-size: 1.5em;
+      }
+    }
+  }
+  
+
+  .main-skills{
+    margin-top: 0;
+    .skill-text {
+      padding: 0px 0 0 0;
+    }
+  }
+  // Skills page styling
+  .skill-text div {
+    padding: 2% 0 5% 0;
+  }
+
+  .skill-item:hover {
+    color: var(--links-colour);
+    transition: color 0.3s ease-in-out;
+  }
+
+}
