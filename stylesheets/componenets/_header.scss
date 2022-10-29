@@ -1,0 +1,90 @@
+@import '../default/default';
+
+
+// Navigation Styling
+header {
+  translate: 0 -5px;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  padding: 1rem 1rem .5rem;
+  color: $foreground-colour;
+  background-color: $background-colour;
+  text-align: center;
+  border-bottom: 1px solid $foreground-colour;
+  nav {
+    position: relative;
+    height: 2.5rem;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1.5rem;
+      padding-left: 0;
+      margin-block: 0;
+      overflow-x: auto;
+      list-style: none;
+      text-align: center;
+      white-space: nowrap;
+      li {
+        padding: 0 4%;
+        transition:all .3s ease;
+        &:hover {
+          transform: translateY(5px);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+    }
+    a {
+      display: block;
+      padding: .5rem .75rem;
+    }
+  }
+  a {
+    color: rgba(#fff, .65);
+    position: sticky;
+    top: 0;
+  }
+  h1 {
+    color: $background-colour;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+  }
+}
+
+
+
+// Tablet break point
+@media only screen and (min-width: 600px) {
+  header {
+    width: 100%;
+    justify-content: end;
+    display: flex;
+    nav {
+      ul {
+        width: 90vw;
+      }
+    }
+  }
+}
+
+// Desktop breakpoint
+@media only screen and (min-width: 1000px) {
+  header {
+    width: inherit;
+    justify-content: end;
+    display: flex;
+    nav {
+      all:unset;
+      ul {
+        all:unset;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

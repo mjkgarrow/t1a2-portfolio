@@ -1,0 +1,41 @@
+@import './colours';
+
+// Setting up fonts, text colour, direction
+body {
+  background-color: $background-colour;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  block-size: fit-content;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+// Joke section
+.joke {
+  display: none;
+  position: relative;
+  top: 50%;
+  margin: -10px auto;
+}
+
+@media only screen and (max-width: 300px) {
+  .joke {
+    display: block;
+  }
+  body {
+    height: 100vh;
+  }
+  header {
+    all:unset;
+    display: none;
+  }
+  .main-container {
+    display: none;
+  }
+  .find-me {
+    all:unset;
+    display: none;
+  }
+}

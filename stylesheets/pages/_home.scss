@@ -1,0 +1,152 @@
+@import '../default/default';
+@import '../componenets/animation';
+
+
+/* Main body */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+  margin-top: 70px;
+}
+
+.intro {
+  line-height: 1.2;
+  min-width: fit-content;
+  margin-bottom: 20%;
+}
+
+/* Animation for memoji image */
+.memoji-container {
+  display: flex;
+  justify-content: center;
+}
+
+.memoji-img {
+  max-width: 300px;
+  animation: memoji-animation 10s ease-in infinite;
+}
+
+
+/* Introductory text */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 10%; */
+}
+
+.hand-emoji {
+  display: inline-block;
+  animation: wiggle 3s infinite;
+}
+
+.intro-content {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  font-size: 3em;
+  padding: 15px;
+}
+
+.bold-text-color {
+  color: var(--bold-text);
+}
+
+/* Intro text animation */
+.text-animation {
+  height: 1.2em;
+  width: fit-content;
+}
+
+.s, .a, .st {
+  width: fit-content;
+  position: absolute;
+}
+
+.sites {
+  width: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 8px;
+  border-right: .08em solid var(--foreground-colour);
+  animation: blink-caret 0.5s step-end infinite, 
+  type-new 0.5s steps(6, end) forwards 1s, 
+  delete-new 0.5s steps(6) forwards 3.5s, 
+  hide-element forwards 4.1s;
+}
+
+.apps {
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 8px;
+  animation: blink-caret 0.5s step-end infinite 4s, 
+  type-new 0.5s steps(6) forwards 4s, 
+  delete-new 0.5s steps(6) forwards 6.5s, 
+  hide-element 0.1s forwards 7.1s;
+}
+
+.stuff {
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 8px;
+  animation: blink-caret 0.5s step-end infinite 7s, 
+  type-new 0.5s steps(6) forwards 7s,
+  stop-blink 0.1s forwards 7.6s;
+}
+
+/* Text divs in main container*/
+.text {
+  padding: 0 10% 5% 10%;
+  /* margin-right: 10%; */
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(#ccc,#ccc);
+  background-size: 50% 2px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.text div p {
+  padding: 0 0 1em 0;
+}
+
+.text div {
+  width: 80%;
+}
+
+.text h2 {
+  color: $foreground-colour;
+  padding: 5% 0;
+  font-size: 1.6em;
+}
+
+.text div p a {
+  color: $links-colour;
+}
+
+
+/* Styling for About page main section */
+.main-about {
+  margin-top: 0;
+}
+.about-img {
+  max-width: 200px;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex-direction: column;
+  align-items: center;
+  background-image: none;
+  font-size: 2em;
+}

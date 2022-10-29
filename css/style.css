@@ -2,12 +2,33 @@
 
 /* Colour scheme */
 :root {
-  --primary-colour: #142632ff;
-  --secondary-colour: #D2823Bff;
-  --ternary-colour: #9ea979;
-  --highlight: #5E6548ff;
-  --bold-text: #c9a042;
-  --box-colour: #162a37;
+  --background-colour: #142632ff;
+  --secondary-background: #1e3a4c;
+  --foreground-colour: #e89b57;
+  --links-colour: #c19ade;
+  --bold-text: #e079e0;
+  
+
+  /* --background-colour: #1B3242;
+  --secondary-background: #2A4F69;
+  --foreground-colour: #88c4ec;
+  --links-colour: #5DB0E8;
+  --bold-text: #e079e0; */
+
+
+  /* --background-colour: #344e41ff;
+  --secondary-background: #3a5a40ff;
+  --links-colour: #588157ff;
+  --foreground-colour: #a3b18aff;
+  --bold-text: ; */
+
+  
+  /* --background-colour: #4a4dab;
+  --foreground-colour: #5FECC8;
+  --secondary-background: #414490;
+  --links-colour: #f96c6c;
+  --bold-text: #87d46c; */
+  
 }
 
 /* CSS reseting */
@@ -41,7 +62,7 @@ a, a:visited, a:hover, a:active {
 
 /* Setting up fonts, colours, direction */
 body {
-  background-color: var(--primary-colour);
+  background-color: var(--background-colour);
   color: white;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
@@ -58,10 +79,10 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem 1rem .5rem;
-  color: var(--secondary-colour);
-  background-color: var(--primary-colour);
+  color: var(--foreground-colour);
+  background-color: var(--background-colour);
   text-align: center;
-  border-bottom: 1px solid var(--secondary-colour);
+  border-bottom: 1px solid var(--foreground-colour);
 }
   
 header a {
@@ -71,7 +92,7 @@ header a {
 }
 
 header h1 {
-  color: var(--primary-colour);
+  color: var(--background-colour);
   padding: 0;
   margin-top: 0;
   margin-bottom: .5rem;
@@ -190,7 +211,7 @@ nav a {
   overflow: hidden;
   white-space: nowrap;
   margin-right: 8px;
-  border-right: .08em solid var(--secondary-colour);
+  border-right: .08em solid var(--foreground-colour);
   animation: blink-caret 0.5s step-end infinite, 
   type-new 0.5s steps(6, end) forwards 1s, 
   delete-new 0.5s steps(6) forwards 3.5s, 
@@ -235,7 +256,7 @@ nav a {
 
 @keyframes blink-caret {
   from, to {border-right: .05em solid transparent;}
-  50% {border-right: .05em solid var(--secondary-colour);}
+  50% {border-right: .05em solid var(--foreground-colour);}
 }
 
 @keyframes stop-blink {
@@ -275,13 +296,13 @@ nav a {
 }
 
 .text h2 {
-  color: var(--secondary-colour);
+  color: var(--foreground-colour);
   padding: 5% 0;
   font-size: 1.6em;
 }
 
 .text div p a {
-  color: var(--ternary-colour);
+  color: var(--links-colour);
 }
 
 
@@ -321,7 +342,7 @@ nav a {
 }
 
 .skill-item:hover {
-  color: var(--ternary-colour);
+  color: var(--links-colour);
   transition: color 0.3s ease-in-out;
 }
 
@@ -345,7 +366,7 @@ nav a {
   max-width: 400px;
   padding: 20px;
   border-radius: 20px;
-  background-color: var(--box-colour);
+  background-color: var(--secondary-background);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 30px 0px;
 }
 
@@ -358,7 +379,7 @@ nav a {
 
 .projects-content h2{
   padding: 0 0 10px 0;
-  color: var(--secondary-colour);
+  color: var(--foreground-colour);
 }
 
 .projects-content p {
@@ -383,7 +404,7 @@ nav a {
 
 /* Find-me footer */
 .find-me {
-  background-color: var(--highlight);
+  background-color: var(--secondary-background);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -414,7 +435,7 @@ nav a {
 }
 .find-me-icon:hover {
   transform: scale(1.5);
-  color: var(--secondary-colour);
+  color: var(--foreground-colour);
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -604,7 +625,7 @@ nav a {
   }
 
   .skill-item:hover {
-    color: var(--ternary-colour);
+    color: var(--links-colour);
     transition: color 0.3s ease-in-out;
   }
 
