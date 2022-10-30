@@ -69,18 +69,19 @@
       }
     }
   }
-}
 
-
-/* Animation for memoji image */
-.memoji-container {
-  display: flex;
-  justify-content: center;
-  .memoji-img {
-    max-width: 300px;
-    animation: memoji-animation 10s ease-in infinite;
+  // Memoji image and animation
+  .memoji-container {
+    display: flex;
+    justify-content: center;
+    .memoji-img {
+      max-width: 300px;
+      animation: memoji-animation 10s ease-in infinite;
+    }
   }
 }
+
+
 
 // Tablet break point
 @media only screen and (min-width: 600px) {

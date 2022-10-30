@@ -57,22 +57,11 @@
 }
 
 @media only screen and (min-width: 1000px){
-  .find-me div {
-    flex-direction: row;
-    width: 50%;
-    align-items: center;
-    // div {
-    //   width: 50%;
-    //   div {
-    //     div {
-    //       span {
-    //         padding: 0px 30px;
-    //       }
-    //     }
-    //   }
-    // }
-    // h1 {
-    //   width: 50%;
-    // }
+  .find-me {
+    div {
+      flex-direction: row;
+      width: 50%;
+      align-items: center;
+    }
   }
 }

@@ -13,13 +13,47 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     .list-container {
+      width: 80%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
       .list-content {
-        padding: 15px;
-        margin: 0 0 30px 0;
-        border-radius: 20px;
-        background-color: $secondary-background;
-        box-shadow: rgb(0 0 0 / 20%) 0px 8px 30px 0px;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 0 20px 0;
+        a {
+          div {
+            background-color: $secondary-background;
+            border-radius: 10px;
+            .image-content {
+              width: 100%;
+              height: 200px;
+              overflow: hidden;
+              border-radius: 10px 10px 0 0;
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                  transform: scale(1.2);
+                }
+              }
+            }
+            .title-content {
+              padding: 10px 10px 15px 10px;
+              div:hover {
+                color: $links-colour;
+              }
+              h2 {
+                font-size: 1em;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -28,34 +62,13 @@
 
 // Tablet break point
 @media only screen and (min-width: 600px) {
-  // Blog page styling
   .main-blog {
     .blog-list {
-      width: 75%;
-      max-width: 900px;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      align-items: center;
       .list-container {
         width: 100%;
-        display: flex;
         flex-flow: row wrap;
-        justify-content: center;
-        a {
-          padding: 15px;
-          height: 140px;
-          width: 200px;
-          margin: 10px 10px;
-          border-radius: 20px;
-          transition: all 0.3s ease-in-out;
-          background-color: $secondary-background;
-          background: url('../../images/memoji.png');
-          // box-shadow: rgb(0 0 0 / 20%) 0px 8px 30px 0px;
-          &:hover {
-            color: $background-colour;
-            background-color: $foreground-colour;
-          }
+        .list-content {
+          margin: 20px;
         }
       }
     }
@@ -64,22 +77,13 @@
 
 // Desktop breakpoint
 @media only screen and (min-width: 1000px) {
-  // Blog page styling
   .main-blog {
     .blog-list {
       .list-container {
-        a {
-          padding: 15px;
-          height: 200px;
-          width: 230px;
-          margin: 10px 10px;
-          border-radius: 20px;
-          background-color: $secondary-background;
-          // box-shadow: rgb(0 0 0 / 20%) 0px 8px 30px 0px;
-          &:hover {
-            color: $background-colour;
-            background-color: $foreground-colour;
-          }
+        width: 100%;
+        flex-flow: row wrap;
+        .list-content {
+          margin: 20px;
         }
       }
     }
