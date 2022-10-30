@@ -300,85 +300,26 @@ header nav ul li a {
     transform: rotate(0deg);
   }
 }
-main {
+.main-home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
 }
-
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.text div {
-  width: 80%;
-}
-.text div p {
-  padding: 0 0 1em 0;
-}
-.text div p a {
-  color: #c19ade;
-}
-.text h2 {
-  color: #e89b57;
-  padding: 5% 0;
-  font-size: 1.6em;
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-  }
-  main .text {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-    margin: -30px 0 -20px 0;
-  }
-  main .text {
-    align-self: center;
-    padding: 30px 0 0 0;
-    text-align: initial;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  main .text div {
-    width: 50%;
-  }
-  main .text h2 {
-    padding: 2% 0;
-  }
-}
-.intro {
+.main-home .intro {
+  margin: 50px 0 0 0;
   line-height: 1.2;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   margin-bottom: 20%;
 }
-.intro .intro-container {
+.main-home .intro .intro-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* padding: 10%; */
 }
-.intro .intro-container .intro-content {
+.main-home .intro .intro-container .intro-content {
   font-size: 2em;
   font-weight: bold;
   text-align: left;
@@ -386,27 +327,27 @@ main {
   font-size: 3em;
   padding: 15px;
 }
-.intro .intro-container .intro-content .hand-emoji {
+.main-home .intro .intro-container .intro-content .hand-emoji {
   display: inline-block;
   -webkit-animation: wiggle 3s infinite;
           animation: wiggle 3s infinite;
 }
-.intro .intro-container .intro-content .bold-text-color {
+.main-home .intro .intro-container .intro-content .bold-text-color {
   color: #e079e0;
 }
-.intro .intro-container .intro-content .text-animation {
+.main-home .intro .intro-container .intro-content .text-animation {
   height: 1.2em;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.intro .intro-container .intro-content .text-animation .s, .intro .intro-container .intro-content .text-animation .a, .intro .intro-container .intro-content .text-animation .st {
+.main-home .intro .intro-container .intro-content .text-animation .s, .main-home .intro .intro-container .intro-content .text-animation .a, .main-home .intro .intro-container .intro-content .text-animation .st {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
 }
-.intro .intro-container .intro-content .text-animation .s .sites, .intro .intro-container .intro-content .text-animation .a .sites, .intro .intro-container .intro-content .text-animation .st .sites {
+.main-home .intro .intro-container .intro-content .text-animation .s .sites, .main-home .intro .intro-container .intro-content .text-animation .a .sites, .main-home .intro .intro-container .intro-content .text-animation .st .sites {
   width: 0px;
   overflow: hidden;
   white-space: nowrap;
@@ -415,7 +356,7 @@ main {
   -webkit-animation: blink-caret 0.5s step-end infinite, type-new 0.5s steps(6, end) forwards 1s, delete-new 0.5s steps(6) forwards 3.5s, hide-element forwards 4.1s;
           animation: blink-caret 0.5s step-end infinite, type-new 0.5s steps(6, end) forwards 1s, delete-new 0.5s steps(6) forwards 3.5s, hide-element forwards 4.1s;
 }
-.intro .intro-container .intro-content .text-animation .s .apps, .intro .intro-container .intro-content .text-animation .a .apps, .intro .intro-container .intro-content .text-animation .st .apps {
+.main-home .intro .intro-container .intro-content .text-animation .s .apps, .main-home .intro .intro-container .intro-content .text-animation .a .apps, .main-home .intro .intro-container .intro-content .text-animation .st .apps {
   width: 0%;
   overflow: hidden;
   white-space: nowrap;
@@ -423,7 +364,7 @@ main {
   -webkit-animation: blink-caret 0.5s step-end infinite 4s, type-new 0.5s steps(6) forwards 4s, delete-new 0.5s steps(6) forwards 6.5s, hide-element 0.1s forwards 7.1s;
           animation: blink-caret 0.5s step-end infinite 4s, type-new 0.5s steps(6) forwards 4s, delete-new 0.5s steps(6) forwards 6.5s, hide-element 0.1s forwards 7.1s;
 }
-.intro .intro-container .intro-content .text-animation .s .stuff, .intro .intro-container .intro-content .text-animation .a .stuff, .intro .intro-container .intro-content .text-animation .st .stuff {
+.main-home .intro .intro-container .intro-content .text-animation .s .stuff, .main-home .intro .intro-container .intro-content .text-animation .a .stuff, .main-home .intro .intro-container .intro-content .text-animation .st .stuff {
   width: 0%;
   overflow: hidden;
   white-space: nowrap;
@@ -431,54 +372,125 @@ main {
   -webkit-animation: blink-caret 0.5s step-end infinite 7s, type-new 0.5s steps(6) forwards 7s, stop-blink 0.1s forwards 7.6s;
           animation: blink-caret 0.5s step-end infinite 7s, type-new 0.5s steps(6) forwards 7s, stop-blink 0.1s forwards 7.6s;
 }
-.intro .memoji-container {
+.main-home .intro .memoji-container {
   display: flex;
   justify-content: center;
 }
-.intro .memoji-container .memoji-img {
+.main-home .intro .memoji-container .memoji-img {
   max-width: 300px;
   -webkit-animation: memoji-animation 10s ease-in infinite;
           animation: memoji-animation 10s ease-in infinite;
 }
+.main-home .home-text {
+  padding: 0 10% 5% 10%;
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-home .home-text div p {
+  padding: 0 0 1em 0;
+}
+.main-home .home-text div p a {
+  color: #c19ade;
+}
+.main-home .home-text h2 {
+  color: #e89b57;
+  padding: 5% 0;
+}
+.main-home .resume-download {
+  margin: 50px;
+  align-self: center;
+}
+.main-home .resume-download a button {
+  all: unset;
+  background-color: #e89b57;
+  color: #142632;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  align-self: center;
+}
+.main-home .resume-download a button:hover {
+  background-color: #1e3a4c;
+  color: #e89b57;
+  box-shadow: rgba(0, 0, 0, 0.3411764706) 0px 8px 30px 0px;
+}
 
 @media only screen and (min-width: 600px) {
-  .main-container {
-    margin-top: 90px;
+  .main-home {
+    margin-top: 70px;
   }
-  .main-container .intro {
+  .main-home .intro {
     margin-bottom: 10%;
     display: flex;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-  .main-container .intro .intro-container {
+  .main-home .intro .intro-container {
     padding: 0;
   }
-  .main-container .intro .memoji-content {
+  .main-home .intro .memoji-content {
     translate: 0 -40px;
   }
-  .main-container .text {
+  .main-home .home-text {
     font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 1000px) {
-  .main-container .intro {
+  .main-home .intro {
     margin-bottom: 3%;
   }
-  .main-container .intro .intro-content {
+  .main-home .intro .intro-content {
     font-size: 4.4em;
   }
-  .main-container .intro .memoji-content {
+  .main-home .intro .memoji-content {
     all: unset;
     translate: 40px 0;
     width: 100%;
   }
-  .main-container .intro .memoji-content .memoji-img {
+  .main-home .intro .memoji-content .memoji-img {
     max-width: 300px;
   }
-  .main-container .text {
-    font-size: 1.5em;
+  .main-home .home-text {
+    flex-direction: row;
+    width: 100vw;
+    font-size: 1em;
+    padding: 0 0 0 0;
+    margin-top: 50px;
+  }
+  .main-home .home-text div:nth-child(1):after {
+    content: "";
+    background: white;
+    position: absolute;
+    height: 40%;
+    width: 2px;
+    translate: 213px -166px;
+  }
+  .main-home .home-text div:nth-child(2):after {
+    content: "";
+    background: white;
+    position: absolute;
+    height: 50%;
+    width: 2px;
+    translate: 213px -303px;
+  }
+  .main-home .home-text div:nth-child(3):after {
+    content: "";
+    background: white;
+    position: absolute;
+    height: 30%;
+    width: 2px;
+    translate: 213px -376px;
+  }
+  .main-home .home-text div {
+    width: 240px;
+    padding: 0 25px;
   }
 }
 @keyframes memoji-animation {
@@ -544,71 +556,6 @@ main {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
-}
-
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.text div {
-  width: 80%;
-}
-.text div p {
-  padding: 0 0 1em 0;
-}
-.text div p a {
-  color: #c19ade;
-}
-.text h2 {
-  color: #e89b57;
-  padding: 5% 0;
-  font-size: 1.6em;
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-  }
-  main .text {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-    margin: -30px 0 -20px 0;
-  }
-  main .text {
-    align-self: center;
-    padding: 30px 0 0 0;
-    text-align: initial;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  main .text div {
-    width: 50%;
-  }
-  main .text h2 {
-    padding: 2% 0;
   }
 }
 .main-about {
@@ -703,71 +650,6 @@ main {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
-}
-
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.text div {
-  width: 80%;
-}
-.text div p {
-  padding: 0 0 1em 0;
-}
-.text div p a {
-  color: #c19ade;
-}
-.text h2 {
-  color: #e89b57;
-  padding: 5% 0;
-  font-size: 1.6em;
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-  }
-  main .text {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-    margin: -30px 0 -20px 0;
-  }
-  main .text {
-    align-self: center;
-    padding: 30px 0 0 0;
-    text-align: initial;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  main .text div {
-    width: 50%;
-  }
-  main .text h2 {
-    padding: 2% 0;
   }
 }
 .main-projects {
@@ -930,71 +812,6 @@ main {
     transform: rotate(0deg);
   }
 }
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
-}
-
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.text div {
-  width: 80%;
-}
-.text div p {
-  padding: 0 0 1em 0;
-}
-.text div p a {
-  color: #c19ade;
-}
-.text h2 {
-  color: #e89b57;
-  padding: 5% 0;
-  font-size: 1.6em;
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-  }
-  main .text {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-    margin: -30px 0 -20px 0;
-  }
-  main .text {
-    align-self: center;
-    padding: 30px 0 0 0;
-    text-align: initial;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  main .text div {
-    width: 50%;
-  }
-  main .text h2 {
-    padding: 2% 0;
-  }
-}
 .main-skills {
   margin-top: 0;
 }
@@ -1133,71 +950,6 @@ main {
     transform: rotate(0deg);
   }
 }
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
-}
-
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.text div {
-  width: 80%;
-}
-.text div p {
-  padding: 0 0 1em 0;
-}
-.text div p a {
-  color: #c19ade;
-}
-.text h2 {
-  color: #e89b57;
-  padding: 5% 0;
-  font-size: 1.6em;
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-  }
-  main .text {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-    margin: -30px 0 -20px 0;
-  }
-  main .text {
-    align-self: center;
-    padding: 30px 0 0 0;
-    text-align: initial;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  main .text div {
-    width: 50%;
-  }
-  main .text h2 {
-    padding: 2% 0;
-  }
-}
 .main-blog {
   margin-top: 0;
 }
@@ -1331,71 +1083,6 @@ main {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
-}
-
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.text div {
-  width: 80%;
-}
-.text div p {
-  padding: 0 0 1em 0;
-}
-.text div p a {
-  color: #c19ade;
-}
-.text h2 {
-  color: #e89b57;
-  padding: 5% 0;
-  font-size: 1.6em;
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-  }
-  main .text {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-    margin: -30px 0 -20px 0;
-  }
-  main .text {
-    align-self: center;
-    padding: 30px 0 0 0;
-    text-align: initial;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  main .text div {
-    width: 50%;
-  }
-  main .text h2 {
-    padding: 2% 0;
   }
 }
 .main-post {
@@ -1571,71 +1258,6 @@ pre code {
     transform: rotate(0deg);
   }
 }
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
-}
-
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.text div {
-  width: 80%;
-}
-.text div p {
-  padding: 0 0 1em 0;
-}
-.text div p a {
-  color: #c19ade;
-}
-.text h2 {
-  color: #e89b57;
-  padding: 5% 0;
-  font-size: 1.6em;
-}
-
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-  }
-  main .text {
-    font-size: 1.5em;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main {
-    margin-top: 90px;
-  }
-  main .heading {
-    font-size: 3em;
-    margin: -30px 0 -20px 0;
-  }
-  main .text {
-    align-self: center;
-    padding: 30px 0 0 0;
-    text-align: initial;
-    width: 100%;
-    font-size: 1.5em;
-  }
-  main .text div {
-    width: 50%;
-  }
-  main .text h2 {
-    padding: 2% 0;
-  }
-}
 .main-contact {
   margin-top: 0;
 }
@@ -1680,18 +1302,22 @@ main {
 .main-contact .contact-form .form-container .form-content textarea {
   padding: 5px 0 0 10px;
 }
-.main-contact .contact-form .form-container .form-content .submit-buttom {
+.main-contact .contact-form .form-container .form-content div {
+  width: 100px;
+  align-self: center;
+}
+.main-contact .contact-form .form-container .form-content div .submit-buttom {
   all: unset;
   background-color: #e89b57;
   color: #142632;
-  width: 100px;
+  width: 100%;
   border-radius: 10px;
   font-weight: bold;
   padding: 10px;
   text-align: center;
   align-self: center;
 }
-.main-contact .contact-form .form-container .form-content .submit-buttom:hover {
+.main-contact .contact-form .form-container .form-content div .submit-buttom:hover {
   background-color: #1e3a4c;
   color: #e89b57;
   box-shadow: rgba(0, 0, 0, 0.3411764706) 0px 8px 30px 0px;

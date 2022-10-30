@@ -1,73 +1,64 @@
 @import '../default/colours';
 
-// Main body
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 70px;
-}
 
-// Text divs in main container
-.text {
-  padding: 0 10% 5% 10%;
-  font-size: 1em;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  div {
-    width: 80%;
-    p {
-      padding: 0 0 1em 0;
-      a {
-        color: $links-colour;
-      }
-    }
-  }
-  h2 {
-    color: $foreground-colour;
-    padding: 5% 0;
-    font-size: 1.6em;
-  }
-}
+// // Text divs in main container
+// .text {
+//   padding: 0 10% 5% 10%;
+//   font-size: 1em;
+//   text-align: left;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   div {
+//     width: 80%;
+//     p {
+//       padding: 0 0 1em 0;
+//       a {
+//         color: $links-colour;
+//       }
+//     }
+//   }
+//   h2 {
+//     color: $foreground-colour;
+//     padding: 5% 0;
+//     font-size: 1.6em;
+//   }
+// }
 
 
-// For tablet
-@media only screen and (min-width: 600px) {
-  main {
-    margin-top: 90px;
-    .heading {
-      font-size: 3em;
-    }
-    .text {
-      font-size: 1.5em;
-    }
-  }
-}
+// // For tablet
+// @media only screen and (min-width: 600px) {
+//   main {
+//     margin-top: 90px;
+//     .heading {
+//       font-size: 3em;
+//     }
+//     .text {
+//       font-size: 1.5em;
+//     }
+//   }
+// }
 
-// For desktop
-@media only screen and (min-width: 1000px){
-  main {
-    margin-top: 90px;
-    .heading {
-      font-size: 3em;
-      margin: -30px 0 -20px 0;
-    }
-    .text {
-      align-self: center;
-      padding: 30px 0 0 0;
-      text-align: initial;
-      width: 100%;
-      font-size: 1.5em;
-      div {
-        width: 50%;
-      }
-      h2 {
-        padding: 2% 0;
-      }
-    }
-  }
-}
+// // For desktop
+// @media only screen and (min-width: 1000px){
+//   main {
+//     margin-top: 90px;
+//     .heading {
+//       font-size: 3em;
+//       margin: -30px 0 -20px 0;
+//     }
+//     .text {
+//       align-self: center;
+//       padding: 30px 0 0 0;
+//       text-align: initial;
+//       width: 100%;
+//       font-size: 1.5em;
+//       div {
+//         width: 50%;
+//       }
+//       h2 {
+//         padding: 2% 0;
+//       }
+//     }
+//   }
+// }
