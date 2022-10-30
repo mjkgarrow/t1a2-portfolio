@@ -15,29 +15,53 @@
     color: $foreground-colour;
   }
   .skill-text {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1em;
-    text-align: left;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    h2 {
-      color: $foreground-colour;
-      padding: 0 0 5% 0;
-      font-size: 1.5em;
-    }
-    div {
-      text-align: center;
-      margin-bottom: 15px;
-      font-size: 2.5em;
+    .skill-container {
+      max-width: 300px;
+      width: 60%;
+      border-bottom: 1px solid;
       .skill-content {
-        .skill-item {
-          font-size: 4em;
-          transition: all 0.3s ease-in-out;
-          &:hover {
-            color: $links-colour;
-            transition: color 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        padding: 20px 0 20px 0;
+        h2 {
+          padding: 0 0 20px 0;
+          color: $foreground-colour;
+        }
+        div {
+          font-size: 1.8em;
+          a {
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              color: $links-colour;
+            }
+          }
+        }
+      }
+    }
+    .skill-container:nth-last-child(1) {
+      border-bottom: none;
+    }
+  }
+}
+
+// For tablet
+@media only screen and (min-width: 600px) {
+  .main-skills{
+    .skill-text {
+      font-size: 1em;
+      .skill-container {
+        .skill-content {
+          h2 {
+            font-size: 2.3em;
+          }
+          div {
+            font-size: 3em;
           }
         }
       }
@@ -45,52 +69,34 @@
   }
 }
 
-
-// For tablet
-@media only screen and (min-width: 600px) {
-  // Skills page styling
-  .main-skills{
-    .skill-text {
-      font-size: 1.5em;
-      div {
-        text-align: center;
-        margin-bottom: 15px;
-        font-size: 3.5em;
-      }
-    }
-  }
-
-}
-
 // For desktop
 @media only screen and (min-width: 1000px){
-
   .main-skills{
     .skill-text {
-      font-size: 2em;
-      h2 {
-        color: $foreground-colour;
-        padding: 0;
-        font-size: 1.5em;
+      display: flex;
+      flex-flow: row;
+      align-items: baseline;
+      font-size: 1em;
+      .skill-container {
+        border-bottom: none;
+        padding: 0 30px;
+        height: 250px;
+        border-right: 1px solid;
+        .skill-content {
+          // height: 100px;
+          h2 {
+            font-size: 2.3em;
+          }
+          div {
+            text-align: center;
+            font-size: 3em;
+          }
+        }
+      }
+      .skill-container:nth-last-child(1) {
+        border-right: none;
       }
     }
-  }
-  
-
-  .main-skills{
-    margin-top: 0;
-    .skill-text {
-      padding: 0px 0 0 0;
-    }
-  }
-  // Skills page styling
-  .skill-text div {
-    padding: 2% 0 5% 0;
-  }
-
-  .skill-item:hover {
-    color: var(--links-colour);
-    transition: color 0.3s ease-in-out;
   }
 
 }

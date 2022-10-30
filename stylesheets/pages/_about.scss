@@ -20,99 +20,73 @@
       border-radius: 50%;
     }
   }
+  // Text divs in main container
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 5% 10%;
+    font-size: 1em;
+    text-align: left;
+    width: 100%;
+    div {
+      width: 80%;
+      p {
+        padding: 0 0 1em 0;
+        a {
+          color: $links-colour;
+        }
+      }
+    }
+    h2 {
+      color: $foreground-colour;
+      padding: 5% 0;
+    }
+  }
 }
 
 
 
-
-// // Text divs in main container
-// .about-text {
-//   padding: 0 10% 5% 10%;
-//   font-size: 1em;
-//   text-align: left;
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   div {
-//     width: 80%;
-//     p {
-//       padding: 0 0 1em 0;
-//       a {
-//         color: $links-colour;
-//       }
-//     }
-//   }
-//   h2 {
-//     color: $foreground-colour;
-//     padding: 5% 0;
-//     font-size: 1.6em;
-//   }
-// }
-
-
-// // For tablet
-// @media only screen and (min-width: 600px) {
-//   main {
-//     margin-top: 90px;
-//     .heading {
-//       font-size: 3em;
-//     }
-//     .about-text {
-//       font-size: 1.5em;
-//     }
-//   }
-// }
-
-// // For desktop
-// @media only screen and (min-width: 1000px){
-//   main {
-//     margin-top: 90px;
-//     .heading {
-//       font-size: 3em;
-//       margin: -30px 0 -20px 0;
-//     }
-//     .about-text {
-//       align-self: center;
-//       padding: 30px 0 0 0;
-//       text-align: initial;
-//       width: 100%;
-//       font-size: 1.5em;
-//       div {
-//         width: 50%;
-//       }
-//       h2 {
-//         padding: 2% 0;
-//       }
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-
-// Tablet break point
+// For tablet
 @media only screen and (min-width: 600px) {
-  // About page styling
   .main-about {
+    margin-top: 0;
     .about-heading {
       .about-img {
-        margin: 12% 0 0%;
+        width: 250px;
+        margin: 20px;
+      }
+    }
+    .about-text {
+      margin-top: 20px;
+      padding: 0;
+      flex-direction: row;
+      align-items: flex-start;
+      font-size: 1em;
+      margin-bottom: 50px;
+      div {
+        padding: 0 50px;
         max-width: 400px;
+      }
+      .border-left {
+        width: 1px;
+        height: 14em;
+        background-color: white;
+        padding: 0px;
+        translate: 0px 50px;
       }
     }
   }
 }
 
-// Desktop breakpoint
+// For desktop
 @media only screen and (min-width: 1000px){
-  // About page styling
   .main-about {
     .about-text {
-      font-size: 3em;
+      div {
+        max-width: 500px;
+      }
     }
   }
 }
