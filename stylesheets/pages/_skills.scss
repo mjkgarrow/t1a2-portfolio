@@ -5,8 +5,14 @@
 // Styling for Skills page
 .main-skills{
   margin-top: 0;
-  .heading {
-    padding: 0;
+  .skill-heading {
+    padding: 5% 10% 5% 10%;
+    font-size: 2em;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: $foreground-colour;
   }
   .skill-text {
     flex-direction: column;

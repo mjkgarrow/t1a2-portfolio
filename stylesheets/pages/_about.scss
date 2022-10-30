@@ -6,26 +6,15 @@
 // Styling for About page main section
 .main-about {
   margin-top: 0;
-  .heading {
-    padding: 0;
+  .about-heading {
+    padding: 5% 10% 0 10%;
+    font-size: 2em;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 2em;
-    div {
-      width: 80%;
-      p {
-        padding: 0 0 1em 0;
-        a {
-          color: $links-colour;
-        }
-      }
-    }
-    h2 {
-      color: $foreground-colour;
-      padding: 5% 0;
-      font-size: 1.6em;
-    }
+    color: $foreground-colour;
     .about-img {
+      margin: 10%;
       max-width: 200px;
       width: 50%;
       border-radius: 50%;
@@ -37,9 +26,12 @@
 // Tablet break point
 @media only screen and (min-width: 600px) {
   // About page styling
-  .main-about{
-    .heading {
-      font-size: 3em;
+  .main-about {
+    .about-heading {
+      .about-img {
+        margin: 12% 0 0%;
+        max-width: 400px;
+      }
     }
   }
 }
