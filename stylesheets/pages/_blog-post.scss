@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     color: $foreground-colour;
-
   }
   .post {
     display: flex;
@@ -22,12 +21,20 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    margin-bottom: 2em;
+    .back {
+      padding: 10px;
+      .back-tag{
+        text-decoration: underline;
+      }
+    }
     .post-container {
       width: 80%;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
       .image-content {
         width: 100%;
         height: 200px;
@@ -53,6 +60,13 @@
   }
 }
 
+pre {
+  line-height: 1.2;
+  width: 100%;
+  code {
+    border-radius: 10px;
+  }
+}
 
 // Tablet break point
 @media only screen and (min-width: 600px) {
@@ -64,11 +78,6 @@
       padding: 4% 5% 4% 5%;
     }
     .post {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
       .post-container {
         width: 70%;
         max-width: 650px;
@@ -76,11 +85,13 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
+        border-radius: 10px;
         .image-content {
           width: 100%;
           height: 250px;
           overflow: hidden;
           margin: 0 0 20px 0;
+          border-radius: 10px;
           img {
             height: 100%;
             width: 100%;

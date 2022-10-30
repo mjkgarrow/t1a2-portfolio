@@ -27,6 +27,7 @@ a, a:visited, a:hover, a:active {
 
 body {
   line-height: 1.5;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   background-color: #142632;
   color: white;
@@ -116,7 +117,7 @@ header nav ul li a {
   align-items: center;
   width: 100%;
   height: 160px;
-  margin-top: 10%;
+  margin-top: auto;
 }
 .find-me div {
   display: flex;
@@ -1418,6 +1419,13 @@ main {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  margin-bottom: 2em;
+}
+.main-post .post .back {
+  padding: 10px;
+}
+.main-post .post .back .back-tag {
+  text-decoration: underline;
 }
 .main-post .post .post-container {
   width: 80%;
@@ -1425,6 +1433,7 @@ main {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 .main-post .post .post-container .image-content {
   width: 100%;
@@ -1449,6 +1458,14 @@ main {
   margin: 0 0 10px 0;
 }
 
+pre {
+  line-height: 1.2;
+  width: 100%;
+}
+pre code {
+  border-radius: 10px;
+}
+
 @media only screen and (min-width: 600px) {
   .main-post {
     margin-top: 0;
@@ -1458,13 +1475,6 @@ main {
     font-size: 2em;
     padding: 4% 5% 4% 5%;
   }
-  .main-post .post {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
   .main-post .post .post-container {
     width: 70%;
     max-width: 650px;
@@ -1472,12 +1482,14 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
   }
   .main-post .post .post-container .image-content {
     width: 100%;
     height: 250px;
     overflow: hidden;
     margin: 0 0 20px 0;
+    border-radius: 10px;
   }
   .main-post .post .post-container .image-content img {
     height: 100%;
@@ -1495,4 +1507,146 @@ main {
     font-size: 0.8em;
     margin: 0 0 10px 0;
   }
+}
+@keyframes memoji-animation {
+  from, to, 50% {
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  25% {
+    translate: 10px 10px;
+    rotate: 3deg;
+  }
+  75% {
+    translate: -10px 10px;
+    rotate: -3deg;
+  }
+}
+@keyframes type-new {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes delete-new {
+  to {
+    width: 0%;
+  }
+}
+@keyframes hide-element {
+  0%, 99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-right: 0.05em solid transparent;
+  }
+  50% {
+    border-right: 0.05em solid #e89b57;
+  }
+}
+@keyframes stop-blink {
+  to {
+    border-right: 0.05em solid transparent;
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(10deg);
+  }
+  95% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+  margin-top: 70px;
+}
+
+.text {
+  padding: 0 10% 5% 10%;
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.text div {
+  width: 80%;
+}
+.text div p {
+  padding: 0 0 1em 0;
+}
+.text div p a {
+  color: #c19ade;
+}
+.text h2 {
+  color: #e89b57;
+  padding: 5% 0;
+  font-size: 1.6em;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    margin-top: 90px;
+  }
+  main .heading {
+    font-size: 3em;
+  }
+  main .text {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main {
+    margin-top: 90px;
+  }
+  main .heading {
+    font-size: 3em;
+    margin: -30px 0 -20px 0;
+  }
+  main .text {
+    align-self: center;
+    padding: 30px 0 0 0;
+    text-align: initial;
+    width: 100%;
+    font-size: 1.5em;
+  }
+  main .text div {
+    width: 50%;
+  }
+  main .text h2 {
+    padding: 2% 0;
+  }
+}
+.main-contact {
+  margin-top: 0;
+}
+.main-contact .contact-heading {
+  padding: 5% 10% 0 10%;
+  font-size: 2em;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #e89b57;
 }/*# sourceMappingURL=main.css.map */

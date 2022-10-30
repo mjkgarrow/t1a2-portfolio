@@ -1,0 +1,25 @@
+@import '../default/colours';
+@import '../componenets/animation';
+@import '../componenets/main-section';
+
+// Styling for Projects page
+.main-contact {
+  margin-top: 0;
+  .contact-heading {
+    padding: 5% 10% 0 10%;
+    font-size: 2em;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: $foreground-colour;
+  }
+}
+
+// For tablet
+@media only screen and (min-width: 600px) {
+}
+
+// For desktop
+@media only screen and (min-width: 1000px){
+}

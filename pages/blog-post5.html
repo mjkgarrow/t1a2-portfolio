@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../stylesheets/main.css">
+  <link rel="stylesheet" href="../stylesheets/main.css"/>
 
   <!-- Icons from Font Awesome https://fontawesome.com/ -->
   <script src="https://kit.fontawesome.com/000108bc04.js" crossorigin="anonymous"></script>
 
   <!-- Highlighting styles from https://highlightjs.org/ -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.6.0/styles/atom-one-dark.css">
-
+  
   <title>T1A2 - Portfolio</title>
 </head>
 <body>
@@ -32,7 +32,7 @@
   <!-- Main -->
   <main class="main-post">
     <section class="post-heading">
-      <h2>Compilers and Interpreters</h2>
+      <h2>Data types</h2>
     </section>
     
     <!-- Blog post section -->
@@ -40,31 +40,65 @@
       <div class="post-container">
         <!-- Hero image -->
         <div class="image-content">
-          <img src="../images/blog1.jpg" alt="Picture of code on a screen">
+          <img src="../images/blog5.jpg" alt="Picture of code on a screen">
         </div>
         <!-- Text -->
         <p class="date">October 2022</p>
-        <p>Compilers and interpreters are both used to convert code from high-level programming languages (such as Javascript or Python) into machine code, which is composed of binary bits of 0s and 1s that the computer can then run. The main difference between compilers and interpreters is when the machine code is written and what it does with it.</p>
-        <br>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quam, in error ratione possimus voluptate! Laborum, culpa sint eaque laboriosam quaerat aspernatur ad, mollitia aut vel reiciendis hic facilis blanditiis quam expedita dicta. Nostrum odit suscipit odio voluptates unde accusamus, tempora dicta repellendus facere quod voluptas recusandae? Suscipit, error a!
+          In programming languages, data are stored in <em>variables</em>. The kind of data a variable can store is called its <em>data type</em>. A data type dictates what kinds of values can be stored and what kinds of operations can be done on that data. Let's look a few examples of data types.
         </p>
         <br>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quam, in error ratione possimus voluptate! Laborum, culpa sint eaque laboriosam quaerat aspernatur ad, mollitia aut vel reiciendis hic facilis blanditiis quam expedita dicta. Nostrum odit suscipit odio voluptates unde accusamus, tempora dicta repellendus facere quod voluptas recusandae? Suscipit, error a!
+          Here is a 'str' data type - they are surrounded by single or double quotation marks. 'str' is short for 'string', ie: a string of characters. 'str' contain text data (which may include numbers, which shouldn't be confused with ints). 'str' can be printed as a literal - meaning it will print what is in the quote marks.
         </p>
-        <br>
+        <pre>
+          <code class="langugage-python">
+  text = "Hello"
+  print(text)
+  >>> Hello
+          </code>
+        </pre>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quam, in error ratione possimus voluptate! Laborum, culpa sint eaque laboriosam quaerat aspernatur ad, mollitia aut vel reiciendis hic facilis blanditiis quam expedita dicta. Nostrum odit suscipit odio voluptates unde accusamus, tempora dicta repellendus facere quod voluptas recusandae? Suscipit, error a!
+          'str' are iterable, you can loop through each character in a string. 
         </p>
+        <pre>
+          <code class="langugage-python">
+  print(text[1])
+  >>> e
+          </code>
+        </pre>
+        <p>
+          'str' can be concatenated, which means 'put together in a series'.
+        </p>
+        <pre>
+          <code class="langugage-python">
+  text1 = "Ma"
+  text2 = "tt"
+  print(text1 + text2)
+  >>> e
+          </code>
+        </pre>
+        <p>
+          'Int' data type - they are numeric and a whole number, either positive or negative. 'Int' is short of 'integer'. Ints can do mathematical operations, eg: addition, subtraction, multiplication
+        </p>
+        <pre>
+          <code class="langugage-python">
+  num1 = 5
+  num2 = 3
+  num3 = 12351348619348234754
+  num4 = -252345
+  print(num1 + num2)
+  >>> 8
+          </code>
+        </pre>
       </div>
-
+      
       <!-- Return to blog -->
       <p class="back"><a class="back-tag" href="./blog.html">Back</a></p>
 
     </div>
   </main>
-    
+
   <!-- Footer -->
   <footer class="find-me">
     <div>
@@ -82,6 +116,6 @@
   <!-- Code highlight script from https://highlightjs.org/ -->
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-
+  
 </body>
 </html>
