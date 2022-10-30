@@ -34,10 +34,26 @@
     </section>
 
     <!-- Contact form -->
-    <form action="/">
+    <div class="contact-form">
+      <img class="contact-memoji" src="../images/contact.png" alt="Contact memoji">
+      <div class="form-container">
+        <form class="form-content" action="/" method="POST">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
       
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Say hello!" style="height:200px"></textarea>
+      
+          <input class="submit-buttom" type="submit" value="Send email">
+        </form>
+      </div>
+    </div>
 
-    </form>
+
+
   </main>
 
   <!-- Footer -->

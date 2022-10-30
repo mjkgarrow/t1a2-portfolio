@@ -2,7 +2,7 @@
 @import '../componenets/animation';
 @import '../componenets/main-section';
 
-// Styling for Projects page
+// Styling for Contacts page
 .main-contact {
   margin-top: 0;
   .contact-heading {
@@ -14,12 +14,87 @@
     justify-content: center;
     color: $foreground-colour;
   }
+  // Form container
+  .contact-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .contact-memoji {
+      display: none;
+    }
+    .form-container {
+      width: 80%;
+      max-width: 500px;
+      padding-bottom: 50px;
+      // Form styling
+      .form-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        label {
+          font-weight: bold;
+          padding-bottom: 5px;
+        }
+        input, select, textarea {
+          height: 3em;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          padding: 0 0 0 10px;
+        }
+        textarea {
+          padding: 5px 0 0 10px;
+        }
+        .submit-buttom {
+          all: unset;
+          background-color: $foreground-colour;
+          color: $background-colour;
+          width: 100px;
+          border-radius: 10px;
+          font-weight: bold;
+          padding: 10px;
+          text-align: center;
+          align-self: center;
+          &:hover {
+            background-color: $secondary-background;
+            color: $foreground-colour;
+            box-shadow: #00000057 0px 8px 30px 0px;
+            }
+        }
+      }
+    }
+  }
 }
 
 // For tablet
 @media only screen and (min-width: 600px) {
+  .main-contact {
+    .contact-form {
+      flex-direction: column;
+      align-items: center;
+      .contact-memoji {
+        display: flex;
+        height: 100%;
+        width: 200px;
+        animation: memoji-animation 10s ease-in infinite;
+        transform: translateY(-20%);
+
+      }
+    }
+  }
 }
 
 // For desktop
 @media only screen and (min-width: 1000px){
+  .main-contact {
+    .contact-form {
+      flex-direction: row;
+      .contact-memoji {
+        width: 350px;
+        margin-right: 50px;
+        transform: translateY(-20%);
+      }
+    }
+  }
+
 }
