@@ -2,7 +2,7 @@
 @import '../componenets/animation';
 @import '../componenets/main-section';
 
-// Styling for About page main section
+// Styling for Blog post page main section
 .main-post {
   margin-top: 0;
   .post-heading {
@@ -15,6 +15,8 @@
     justify-content: center;
     color: $foreground-colour;
   }
+
+  // Post section
   .post {
     display: flex;
     flex-direction: column;
@@ -35,6 +37,8 @@
       justify-content: center;
       align-items: center;
       border-radius: 10px;
+
+      // Post image
       .image-content {
         width: 100%;
         height: 200px;
@@ -51,6 +55,8 @@
           }
         }
       }
+
+      // Date text
       .date {
         width: 100%;
         font-size: 0.8em;
@@ -60,6 +66,7 @@
   }
 }
 
+// Code snippets
 pre {
   line-height: 1.2;
   width: 100%;
@@ -77,6 +84,8 @@ pre {
       font-size: 2em;
       padding: 4% 5% 4% 5%;
     }
+
+    // Post section
     .post {
       .post-container {
         width: 70%;
@@ -86,6 +95,8 @@ pre {
         justify-content: center;
         align-items: center;
         border-radius: 10px;
+
+        // Post image
         .image-content {
           width: 100%;
           height: 250px;
@@ -103,6 +114,8 @@ pre {
             }
           }
         }
+
+        // Date text
         .date {
           width: 100%;
           font-size: 0.8em;
