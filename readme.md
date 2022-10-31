@@ -6,6 +6,8 @@ This is my portfolio website.
 
 - [Github repository](https://github.com/mjkgarrow/t1a2-portfolio)
 
+- [Presentation video]()
+
 Desktop view:
 
 <p align="center">
@@ -75,4 +77,6 @@ Colour choices are in line with accessability guidelines for appropriate contras
 
 Wireframe: [Figma link](https://www.figma.com/file/efpb32yzwvxEcuG2w1a3IM/Portfolio)
 
-![Wireframe](./images/WIP%20Index%20wireframe.png)
+<p align="center">
+<img src="./images/WIP%20Index%20wireframe.png" alt="Wireframe" width="300"/>
+</p>

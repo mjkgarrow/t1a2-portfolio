@@ -368,18 +368,44 @@ header nav ul li a {
   color: #e89b57;
   padding: 5% 0;
 }
+.main-home .availability {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.main-home .availability .yes {
+  font-size: 0.6em;
+  padding: 3px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #44c344;
+  margin-left: 10px;
+}
+.main-home .availability .no {
+  display: none;
+  font-size: 0.6em;
+  padding: 3px 1px 0 0;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #c62929;
+  margin-left: 10px;
+}
 .main-home .resume-download {
-  margin: 50px;
+  margin: 20px 0 30px 0;
   align-self: center;
 }
 .main-home .resume-download a button {
   all: unset;
   background-color: #e89b57;
   color: #142632;
-  width: 100%;
-  border-radius: 10px;
+  border-radius: 25px;
   font-weight: bold;
-  padding: 10px;
+  padding: 10px 15px;
   text-align: center;
   align-self: center;
 }
@@ -1349,12 +1375,12 @@ pre code {
   all: unset;
   background-color: #e89b57;
   color: #142632;
-  width: 100%;
-  border-radius: 10px;
+  border-radius: 25px;
   font-weight: bold;
-  padding: 10px;
+  padding: 10px 15px;
   text-align: center;
   align-self: center;
+  width: 100%;
 }
 .main-contact .contact-form .form-container .form-content div .submit-buttom:hover {
   background-color: #1e3a4c;
