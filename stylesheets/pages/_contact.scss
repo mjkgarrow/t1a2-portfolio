@@ -55,6 +55,7 @@
           align-self: center;
           .submit-buttom {
             @include button;
+            translate: -10px;
             width: 100%;
           }
         }

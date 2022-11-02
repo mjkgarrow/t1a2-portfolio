@@ -1380,6 +1380,7 @@ pre code {
   padding: 10px 15px;
   text-align: center;
   align-self: center;
+  translate: -10px;
   width: 100%;
 }
 .main-contact .contact-form .form-container .form-content div .submit-buttom:hover {
