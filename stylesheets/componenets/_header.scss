@@ -47,12 +47,30 @@ header {
 // Tablet break point
 @media only screen and (min-width: 600px) {
   header {
-    width: 100%;
-    justify-content: flex-end;
-    display: flex;
+    translate: 0 -5px;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    padding: 1rem 1rem .5rem;
+    color: $foreground-colour;
+    background-color: $background-colour;
+    text-align: center;
+    border-bottom: 1px solid $foreground-colour;
     nav {
+      position: relative;
+      height: 2.5rem;
       ul {
-        width: 90vw;
+        display: flex;
+        padding-bottom: 1.5rem;
+        padding-left: 0;
+        margin-block: 0;
+        list-style: none;
+        text-align: center;
+        gap: 5%;
+        justify-content: center;
+        li {
+          padding: 0;
+        }
       }
     }
   }
